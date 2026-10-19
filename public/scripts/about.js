@@ -22,18 +22,18 @@ document.querySelectorAll('.rv,.rl,.rr').forEach(el => ro.observe(el));
 /* ---- Why-us row hover ---- */
 document.querySelectorAll('.wp-row').forEach(row => {
   row.addEventListener('mouseenter', () => {
-    row.style.borderColor = 'var(--red)';
+    row.style.borderColor = 'var(--brand-navy)';
     row.style.transform = 'translateX(5px)';
     row.style.boxShadow = '0 6px 24px rgba(0,0,0,0.07)';
     const icon = row.querySelector('div > div');
-    if (icon) { icon.style.background = 'var(--red)'; icon.style.color = 'var(--white)'; }
+    if (icon) { icon.style.background = 'var(--brand-navy)'; icon.style.color = 'var(--white)'; }
   });
   row.addEventListener('mouseleave', () => {
     row.style.borderColor = 'var(--border)';
     row.style.transform = '';
     row.style.boxShadow = '';
     const icon = row.querySelector('div > div');
-    if (icon) { icon.style.background = 'var(--red-tint)'; icon.style.color = 'var(--red)'; }
+    if (icon) { icon.style.background = 'var(--brand-gold-tint)'; icon.style.color = 'var(--brand-navy)'; }
   });
 });
 
@@ -73,10 +73,10 @@ if (nlb) {
     const email = document.getElementById('nle').value.trim();
     if (email && email.includes('@')) {
       nlb.textContent = '✓ Subscribed!'; nlb.style.background = '#1a6e38';
-      setTimeout(() => { nlb.textContent = 'Get Industry Alerts'; nlb.style.background = ''; document.getElementById('nle').value = ''; }, 3000);
+      setTimeout(() => { nlb.textContent = 'Subscribe'; nlb.style.background = ''; document.getElementById('nle').value = ''; }, 3000);
     } else {
       nlb.textContent = 'Enter valid email'; nlb.style.background = '#7a1a1a';
-      setTimeout(() => { nlb.textContent = 'Get Industry Alerts'; nlb.style.background = ''; }, 2500);
+      setTimeout(() => { nlb.textContent = 'Subscribe'; nlb.style.background = ''; }, 2500);
     }
   });
 }

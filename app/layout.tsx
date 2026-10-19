@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Botlhale Solutions Nigeria | Brand Protection & Risk Mitigation",
+  title: "MoneyLot — Intelligent Financial Infrastructure | Banking, Payments & Lending",
   description:
-    "Nigeria's brand protection and intelligence consultancy, safeguarding intellectual property and market integrity across West Africa.",
+    "MoneyLot is a subsidiary of Mainstreet Microfinance Bank. Everything your money needs in one account: everyday business banking, payment gateways, agency banking, debit cards, and lending for Nigerian businesses.",
 };
 
 export default function RootLayout({

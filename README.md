@@ -1,4 +1,4 @@
-# Botlhale Solutions Nigeria
+# Afro Metrics
 
 The site is built with Next.js App Router, TypeScript, Tailwind CSS, and shadcn/ui component conventions.
 
@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Routes
 
 - `/` — Home
-- `/about` — About BSA
+- `/about` — About Afro Metrics
 - `/service` — Services
 - `/contact` — Contact and consultation
 
