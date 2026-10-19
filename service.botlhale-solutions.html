@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | Botlhale Solutions Nigeria – Brand Protection & Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ===================== RESET ===================== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+/* ===================== DESIGN TOKENS ===================== */
+:root{
+  --red:#df0a0a;--red-deep:#b30808;--red-pale:#fdf1f1;--red-tint:rgba(223,10,10,0.07);
+  --black:#0e0e0e;--ink:#1a1a1a;--charcoal:#2d2d2d;--mid:#666;--muted:#999;
+  --border:#e6e6e6;--white:#ffffff;--off:#f7f7f7;--light:#f0f0f0;
+  --ff-d:'Cormorant Garamond',serif;--ff-t:'Bebas Neue',sans-serif;--ff-b:'DM Sans',sans-serif;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+  --sh-s:0 6px 24px rgba(0,0,0,0.07);--sh-m:0 18px 52px rgba(0,0,0,0.11);--sh-r:0 10px 36px rgba(223,10,10,0.25);
+}
+body{font-family:var(--ff-b);color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden;}
+img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}ul{list-style:none;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--light);}::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px;}
+
+/* ===================== UTILITIES ===================== */
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+.sp{padding:110px 0;}.sp-sm{padding:70px 0;}
+.tag{display:inline-flex;align-items:center;gap:9px;font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+.tag::before{content:'';width:22px;height:2px;background:var(--red);flex-shrink:0;}
+.h2{font-family:var(--ff-d);font-size:clamp(2.1rem,4vw,3.3rem);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:18px;}
+.h2 em{font-style:italic;color:var(--red);}
+.lead{font-size:0.98rem;color:var(--mid);line-height:1.85;max-width:570px;}
+
+/* ===================== BUTTONS ===================== */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--ff-b);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:13px 30px;border-radius:2px;border:none;cursor:pointer;transition:all 0.3s var(--ease);}
+.btn i{transition:transform 0.25s;}.btn:hover i{transform:translateX(4px);}
+.btn-red{background:var(--red);color:var(--white);box-shadow:var(--sh-r);}
+.btn-red:hover{background:var(--red-deep);transform:translateY(-2px);box-shadow:0 16px 44px rgba(223,10,10,0.35);}
+.btn-blk{background:var(--ink);color:var(--white);}
+.btn-blk:hover{background:var(--charcoal);transform:translateY(-2px);}
+.btn-ob{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+.btn-ob:hover{background:var(--ink);color:var(--white);}
+.btn-ow{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.4);}
+.btn-ow:hover{background:rgba(255,255,255,0.1);border-color:var(--white);}
+.btn-wh{background:var(--white);color:var(--red);box-shadow:0 8px 28px rgba(0,0,0,0.13);}
+.btn-wh:hover{background:var(--off);transform:translateY(-2px);}
+
+/* ===================== HEADER ===================== */
+header{position:fixed;top:0;left:0;right:0;z-index:999;transition:all 0.4s var(--ease);}
+header.sc{background:rgba(255,255,255,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--border),var(--sh-s);}
+.ni{display:flex;align-items:center;justify-content:space-between;padding:20px 0;transition:padding 0.3s;}
+header.sc .ni{padding:13px 0;}
+.logo{display:flex;align-items:center;gap:12px;}
+.lm{width:40px;height:40px;background:var(--red);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-t);font-size:17px;color:var(--white);letter-spacing:1px;flex-shrink:0;transition:background 0.2s;}
+.lm:hover{background:var(--red-deep);}
+.lt .br{font-family:var(--ff-d);font-size:1.15rem;font-weight:700;color:var(--white);line-height:1;transition:color 0.3s;}
+header.sc .lt .br{color:var(--ink);}
+.lt .sb{font-size:0.58rem;color:rgba(255,255,255,0.5);letter-spacing:0.14em;text-transform:uppercase;margin-top:3px;transition:color 0.3s;}
+header.sc .lt .sb{color:var(--muted);}
+.nav-ul{display:flex;align-items:center;gap:2rem;}
+.nav-ul a{font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.72);transition:color 0.2s;position:relative;padding-bottom:3px;}
+.nav-ul a::after{content:'';position:absolute;bottom:-1px;left:0;right:100%;height:2px;background:var(--red);transition:right 0.3s var(--ease);}
+.nav-ul a:hover,.nav-ul a.active{color:var(--white);}
+.nav-ul a:hover::after,.nav-ul a.active::after{right:0;}
+header.sc .nav-ul a{color:var(--charcoal);}
+header.sc .nav-ul a:hover,header.sc .nav-ul a.active{color:var(--ink);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:3px;}
+.hbg span{display:block;width:24px;height:2px;background:var(--white);transition:all 0.3s;}
+header.sc .hbg span{background:var(--ink);}
+.hbg.op span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hbg.op span:nth-child(2){opacity:0;}
+.hbg.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mm{display:none;position:fixed;inset:0;background:var(--ink);z-index:998;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;}
+.mm.op{display:flex;}
+.mm a{font-family:var(--ff-d);font-size:2rem;font-weight:600;color:var(--white);transition:color 0.2s;}
+.mm a:hover,.mm a.active{color:var(--red);}
+
+/* ===================== PAGE HERO ===================== */
+.page-hero{position:relative;min-height:58vh;display:flex;flex-direction:column;background:var(--black);overflow:hidden;}
+.ph-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=2070');background-size:cover;background-position:center 40%;animation:phz 18s ease-in-out infinite alternate;opacity:0.27;}
+@keyframes phz{from{transform:scale(1);}to{transform:scale(1.06);}}
+.ph-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:70px 70px;}
+.ph-bar{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,transparent,var(--red),transparent);}
+.ph-slice{position:absolute;right:0;top:0;bottom:0;width:36%;background:var(--red);clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);opacity:0.055;}
+
+.ph-body{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:flex-end;}
+.ph-inner{padding:165px 0 0;}
+
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:26px;}
+.breadcrumb a{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--red);}
+.breadcrumb .sep{color:rgba(255,255,255,0.2);font-size:0.55rem;}
+.breadcrumb .cur{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);}
+
+.ph-title{font-family:var(--ff-t);font-size:clamp(3.8rem,10vw,8rem);line-height:0.9;letter-spacing:0.02em;color:var(--white);margin-bottom:22px;}
+.ph-title .ac{color:var(--red);}
+.ph-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.8;max-width:500px;margin-bottom:40px;}
+.ph-actions{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:52px;}
+
+/* Stats strip */
+.ph-strip{position:relative;z-index:2;background:var(--white);border-top:3px solid var(--red);}
+.psi{display:flex;align-items:stretch;}
+.ps{flex:1;padding:22px 28px;border-right:1px solid var(--border);transition:background 0.3s;cursor:default;}
+.ps:last-child{border-right:none;}
+.ps:hover{background:var(--red-pale);}
+.ps .n{font-family:var(--ff-t);font-size:2.2rem;color:var(--red);line-height:1;}
+.ps .l{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;}
+
+/* ===================== STICKY SERVICE NAV ===================== */
+.svc-nav{
+  position:sticky;top:0;z-index:90;
+  background:var(--ink);
+  border-bottom:2px solid rgba(223,10,10,0.3);
+  transition:top 0.3s;
+}
+.svc-nav-inner{
+  display:flex;align-items:stretch;
+  overflow-x:auto;scrollbar-width:none;
+}
+.svc-nav-inner::-webkit-scrollbar{display:none;}
+.snb{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:18px 26px;
+  font-family:var(--ff-b);font-size:0.76rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  color:rgba(255,255,255,0.45);
+  border:none;background:transparent;cursor:pointer;
+  white-space:nowrap;border-bottom:3px solid transparent;
+  transition:all 0.25s var(--ease);
+  position:relative;margin-bottom:-2px;
+}
+.snb i{font-size:0.9rem;transition:color 0.2s;}
+.snb:hover{color:rgba(255,255,255,0.85);}
+.snb:hover i{color:var(--red);}
+.snb.act{color:var(--white);border-bottom-color:var(--red);}
+.snb.act i{color:var(--red);}
+
+/* ===================== SERVICE CONTENT AREA ===================== */
+.svc-area{background:var(--white);}
+
+.svc-panel{
+  display:none;
+  animation:panelIn 0.5s var(--ease) both;
+}
+.svc-panel.act{display:block;}
+@keyframes panelIn{
+  from{opacity:0;transform:translateY(16px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ---- Panel hero row ---- */
+.panel-hero{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;min-height:480px;
+}
+.panel-img{
+  position:relative;overflow:hidden;
+}
+.panel-img img{
+  width:100%;height:100%;object-fit:cover;
+  filter:brightness(0.85);
+  transition:transform 0.6s var(--ease);
+}
+.panel-img:hover img{transform:scale(1.04);}
+.panel-img::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red);}
+
+/* Red corner on image */
+.p-ca{position:absolute;top:0;right:0;width:0;height:0;border-top:70px solid var(--red);border-left:70px solid transparent;z-index:2;opacity:0.9;}
+
+.panel-copy{
+  background:var(--off);
+  padding:60px 56px;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;overflow:hidden;
+}
+/* Ghost number */
+.panel-ghost{
+  position:absolute;bottom:-10px;right:-10px;
+  font-family:var(--ff-t);font-size:10rem;
+  color:rgba(0,0,0,0.04);line-height:1;pointer-events:none;
+}
+.panel-copy .tag{margin-bottom:12px;}
+.panel-copy h2{
+  font-family:var(--ff-d);font-size:clamp(1.8rem,3vw,2.8rem);
+  font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:18px;
+}
+.panel-copy h2 em{font-style:italic;color:var(--red);}
+.panel-copy p{font-size:0.96rem;color:var(--mid);line-height:1.85;margin-bottom:14px;}
+.panel-copy p:last-of-type{margin-bottom:0;}
+.panel-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+
+/* ---- Features grid ---- */
+.features-wrap{
+  background:var(--white);
+  padding:72px 0;
+}
+.features-hd{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-bottom:50px;gap:40px;
+}
+.feat-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);border-right:none;border-bottom:none;
+}
+.feat{
+  padding:36px 30px;
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+  transition:all 0.35s var(--ease);
+}
+.feat::before{
+  content:'';position:absolute;top:0;left:0;
+  width:100%;height:3px;background:var(--red);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s var(--ease);
+}
+.feat:hover{background:var(--off);}
+.feat:hover::before{transform:scaleX(1);}
+.feat:hover .fi{background:var(--red);color:var(--white);}
+.feat-num{
+  font-family:var(--ff-t);font-size:3.5rem;
+  color:rgba(0,0,0,0.03);position:absolute;
+  bottom:8px;right:12px;line-height:1;pointer-events:none;
+}
+.fi{
+  width:48px;height:48px;border-radius:4px;
+  background:var(--red-tint);color:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.15rem;margin-bottom:18px;transition:all 0.3s;
+}
+.feat h4{font-family:var(--ff-d);font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:9px;}
+.feat p{font-size:0.83rem;color:var(--mid);line-height:1.75;}
+
+/* ---- Methodology (for mystery shopping) ---- */
+.method-wrap{
+  background:var(--ink);padding:72px 0;
+}
+.method-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+  margin-top:48px;
+}
+.method-steps{display:flex;flex-direction:column;gap:0;}
+.ms{
+  display:flex;align-items:flex-start;gap:20px;
+  padding:24px 0;border-bottom:1px solid rgba(255,255,255,0.06);
+  transition:background 0.2s;
+}
+.ms:last-child{border-bottom:none;}
+.ms-num{
+  font-family:var(--ff-t);font-size:1.8rem;color:var(--red);
+  line-height:1;flex-shrink:0;width:36px;
+}
+.ms h4{font-size:0.92rem;font-weight:700;color:var(--white);margin-bottom:6px;}
+.ms p{font-size:0.83rem;color:rgba(255,255,255,0.42);line-height:1.7;}
+.method-img{
+  position:relative;border-radius:2px;overflow:hidden;aspect-ratio:4/3;
+}
+.method-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.8);}
+.method-img::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red);}
+.method-fc{
+  position:absolute;bottom:-18px;right:-18px;
+  background:var(--red);padding:20px 24px;border-radius:2px;
+  box-shadow:var(--sh-r);
+}
+.method-fc .fn{font-family:var(--ff-t);font-size:2.2rem;color:var(--white);line-height:1;}
+.method-fc .ft{font-size:0.65rem;font-weight:700;color:rgba(255,255,255,0.72);text-transform:uppercase;letter-spacing:0.1em;margin-top:3px;}
+
+/* ---- Inline CTA inside each panel ---- */
+.panel-cta{
+  background:var(--red);padding:72px 0;
+  position:relative;overflow:hidden;
+}
+.panel-cta::before{content:'';position:absolute;right:0;top:0;bottom:0;width:40%;background:rgba(0,0,0,0.06);clip-path:polygon(20% 0,100% 0,100% 100%,0 100%);}
+.panel-cta::after{content:'';position:absolute;left:-5%;right:78%;top:0;bottom:0;background:rgba(255,255,255,0.04);transform:skewX(-4deg);}
+.pci{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.pct h3{font-family:var(--ff-t);font-size:clamp(1.6rem,3.5vw,2.6rem);letter-spacing:0.04em;color:var(--white);line-height:0.95;margin-bottom:8px;}
+.pct p{color:rgba(255,255,255,0.68);font-size:0.96rem;}
+
+/* ===================== OVERVIEW — All Services Grid ===================== */
+.overview-sec{background:var(--off);}
+.ov-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;margin-top:56px;
+}
+.ovc{
+  background:var(--white);padding:44px 36px;
+  position:relative;overflow:hidden;
+  transition:all 0.35s var(--ease);cursor:pointer;
+}
+.ovc::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 0.4s var(--ease);}
+.ovc:hover{transform:translateY(-8px);box-shadow:var(--sh-m);}
+.ovc:hover::before{transform:scaleX(1);}
+.ovc-num{font-family:var(--ff-t);font-size:4rem;color:rgba(0,0,0,0.03);position:absolute;top:10px;right:14px;line-height:1;pointer-events:none;transition:color 0.3s;}
+.ovc:hover .ovc-num{color:rgba(223,10,10,0.07);}
+.ovc-icon{width:50px;height:50px;border-radius:4px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:20px;transition:all 0.3s;}
+.ovc:hover .ovc-icon{background:var(--red);color:var(--white);}
+.ovc h3{font-family:var(--ff-d);font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.ovc p{font-size:0.84rem;color:var(--mid);line-height:1.78;}
+.ovc-link{
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:20px;font-size:0.73rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--red);opacity:0;transform:translateY(7px);
+  transition:all 0.3s var(--ease);
+}
+.ovc:hover .ovc-link{opacity:1;transform:translateY(0);}
+.ovc-link i{transition:transform 0.2s;}
+.ovc:hover .ovc-link i{transform:translateX(4px);}
+
+/* ===================== CTA BANNER ===================== */
+.cta-s{background:var(--red);padding:86px 0;position:relative;overflow:hidden;}
+.cta-s::before{content:'BSA';font-family:var(--ff-t);font-size:18rem;color:rgba(0,0,0,0.07);position:absolute;right:-50px;top:50%;transform:translateY(-50%);line-height:1;pointer-events:none;}
+.cta-s::after{content:'';position:absolute;left:-6%;right:74%;top:0;bottom:0;background:rgba(255,255,255,0.05);transform:skewX(-5deg);}
+.cta-in{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-t h2{font-family:var(--ff-t);letter-spacing:0.04em;font-size:clamp(1.9rem,4.5vw,3.2rem);color:var(--white);line-height:0.95;margin-bottom:9px;}
+.cta-t p{color:rgba(255,255,255,0.68);font-size:0.98rem;}
+.cta-bs{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* ===================== FOOTER ===================== */
+footer{background:var(--ink);}
+.fm{display:grid;grid-template-columns:2fr 1fr 1fr 1.6fr;gap:56px;padding:76px 0 52px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.fb .flm{width:40px;height:40px;background:var(--red);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-t);font-size:17px;color:var(--white);letter-spacing:1px;margin-bottom:16px;}
+.fb p{font-size:0.83rem;color:rgba(255,255,255,0.34);line-height:1.8;max-width:265px;margin-bottom:24px;}
+.sr{display:flex;gap:9px;}
+.so{width:35px;height:35px;border-radius:3px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.35);font-size:0.83rem;transition:all 0.2s;}
+.so:hover{background:var(--red);color:var(--white);border-color:var(--red);}
+.fc2 h5{font-size:0.67rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.fc2 li{margin-bottom:10px;}
+.fc2 a{font-size:0.83rem;color:rgba(255,255,255,0.36);transition:color 0.2s;}
+.fc2 a:hover{color:var(--white);}
+.ci2 p{display:flex;align-items:flex-start;gap:11px;font-size:0.82rem;color:rgba(255,255,255,0.36);line-height:1.65;margin-bottom:12px;}
+.ci2 i{color:var(--red);margin-top:2px;flex-shrink:0;}
+.nlf input{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:2px;padding:11px 15px;color:var(--white);font-family:var(--ff-b);font-size:0.83rem;margin-bottom:7px;outline:none;transition:border-color 0.2s;}
+.nlf input::placeholder{color:rgba(255,255,255,0.22);}
+.nlf input:focus{border-color:var(--red);}
+.nlf button{width:100%;background:var(--red);color:var(--white);border:none;border-radius:2px;padding:12px;font-family:var(--ff-b);font-size:0.8rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
+.nlf button:hover{background:var(--red-deep);}
+.fb2{padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.fb2 p{font-size:0.75rem;color:rgba(255,255,255,0.18);}
+.lg-links{display:flex;gap:20px;}
+.lg-links a{font-size:0.75rem;color:rgba(255,255,255,0.18);transition:color 0.2s;}
+.lg-links a:hover{color:var(--red);}
+
+/* Back to top */
+.bt{position:fixed;bottom:28px;right:28px;z-index:500;width:42px;height:42px;border-radius:2px;background:var(--red);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.88rem;box-shadow:var(--sh-r);cursor:pointer;opacity:0;transform:translateY(18px);transition:all 0.3s var(--ease);}
+.bt.v{opacity:1;transform:translateY(0);}.bt:hover{background:var(--red-deep);transform:translateY(-3px);}
+
+/* ===================== REVEAL ===================== */
+.rv,.rl,.rr{opacity:0;transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);}
+.rv{transform:translateY(30px);}.rl{transform:translateX(-30px);}.rr{transform:translateX(30px);}
+.rv.iv,.rl.iv,.rr.iv{opacity:1;transform:none;}
+[data-d="1"]{transition-delay:0.1s;}[data-d="2"]{transition-delay:0.2s;}[data-d="3"]{transition-delay:0.3s;}
+[data-d="4"]{transition-delay:0.4s;}[data-d="5"]{transition-delay:0.5s;}[data-d="6"]{transition-delay:0.6s;}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:1100px){
+  .fm{grid-template-columns:1fr 1fr;gap:36px;}
+  .feat-grid{grid-template-columns:1fr 1fr;}
+  .ov-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:900px){
+  .nav-ul,.nav-cta-d{display:none;}.hbg{display:flex;}
+  .panel-hero{grid-template-columns:1fr;}
+  .panel-img{aspect-ratio:16/7;min-height:260px;}
+  .panel-copy{padding:40px 32px;}
+  .method-grid{grid-template-columns:1fr;}
+  .method-fc{display:none;}
+  .psi{flex-wrap:wrap;}
+  .ps{flex:1 1 50%;border-bottom:1px solid var(--border);}
+  .features-hd{flex-direction:column;}
+  .cta-in{flex-direction:column;text-align:center;}
+}
+@media(max-width:600px){
+  .container{padding:0 16px;}.sp{padding:68px 0;}.sp-sm{padding:52px 0;}
+  .ph-title{font-size:3.2rem;}
+  .feat-grid{grid-template-columns:1fr;}
+  .ov-grid{grid-template-columns:1fr;}
+  .fm{grid-template-columns:1fr;gap:28px;}
+  .ps{flex:1 1 100%;}
+  .snb{padding:14px 18px;font-size:0.7rem;}
+  .panel-copy{padding:32px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="hdr">
+  <div class="container">
+    <nav class="ni">
+      <a href="botlhale-solutions.html" class="logo">
+        <div class="lm"><img src="images/logo.jpeg" alt=""></div>
+        <div class="lt">
+          <div class="br">Botlhale Solutions</div>
+          <div class="sb">Nigeria Ltd · Brand Integrity</div>
+        </div>
+      </a>
+      <ul class="nav-ul">
+        <li><a href="service.botlhale-solutions.html">Home</a></li>
+        <li><a href="about-botlhale-solutions.html">About BSA</a></li>
+        <li><a href="service.botlhale-solutions.html" class="active">Services</a></li>
+        <li><a href="botlhale-solutions.html#process">Our Process</a></li>
+        <li><a href="botlhale-solutions.html#why">Why Us</a></li>
+        <li><a href="botlhale-solutions.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta-d" style="display:flex;">
+        <a href="contact.html#consult-form" class="btn btn-red">Get Consultation <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <a href="botlhale-solutions.html">Home</a>
+  <a href="about-botlhale-solutions.html">About BSA</a>
+  <a href="service.botlhale-solutions.html" class="active">Services</a>
+  <a href="botlhale-solutions.html#process">Our Process</a>
+  <a href="botlhale-solutions.html#why">Why Us</a>
+  <a href="botlhale-solutions.html#contact">Contact</a>
+  <a href="contact.html#consult-form" class="btn btn-red" style="margin-top:12px;">Get Consultation</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="ph-bg"></div>
+  <div class="ph-grid"></div>
+  <div class="ph-bar"></div>
+  <div class="ph-slice"></div>
+
+  <div class="ph-body">
+    <div class="ph-inner">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="botlhale-solutions.html">Home</a>
+          <span class="sep"><i class="fas fa-chevron-right"></i></span>
+          <span class="cur">Our Services</span>
+        </div>
+        <h1 class="ph-title">Our <span class="ac">Services</span></h1>
+        <p class="ph-sub">Six intelligence-driven services designed to protect your brand, recover lost revenue, and eliminate risk across every dimension of your business.</p>
+        <div class="ph-actions">
+          <a href="#svc-nav" class="btn btn-red">Explore Services <i class="fas fa-arrow-down"></i></a>
+          <a href="botlhale-solutions.html#contact" class="btn btn-ow">Get a Consultation</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="ph-strip">
+      <div class="container">
+        <div class="psi">
+          <div class="ps"><div class="n" data-count="6" data-sfx="">0</div><div class="l">Core Service Areas</div></div>
+          <div class="ps"><div class="n" data-count="150" data-sfx="+">0</div><div class="l">Brands Served</div></div>
+          <div class="ps"><div class="n" data-count="12" data-sfx="+">0</div><div class="l">Years of Intelligence</div></div>
+          <div class="ps"><div class="n" data-count="98" data-sfx="%">0</div><div class="l">Client Retention Rate</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STICKY SERVICE NAV ===== -->
+<div class="svc-nav" id="svc-nav">
+  <div class="container">
+    <div class="svc-nav-inner">
+      <button class="snb act" data-svc="bp"><i class="fas fa-shield-halved"></i>Brand Protection</button>
+      <button class="snb" data-svc="ms"><i class="fas fa-user-secret"></i>Mystery Shopping</button>
+      <button class="snb" data-svc="mr"><i class="fas fa-chart-line"></i>Market Research</button>
+      <button class="snb" data-svc="dd"><i class="fas fa-magnifying-glass-chart"></i>Due Diligence</button>
+      <button class="snb" data-svc="ba"><i class="fas fa-bullhorn"></i>Brand Awareness</button>
+      <button class="snb" data-svc="lt"><i class="fas fa-chalkboard-user"></i>LE Training</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICE PANELS ===== -->
+<div class="svc-area" id="svcArea">
+
+  <!-- ========== BRAND PROTECTION ========== -->
+  <div class="svc-panel act" id="bp">
+    <!-- Hero Row -->
+    <div class="panel-hero">
+      <div class="panel-img">
+        <img src="https://images.unsplash.com/photo-1590650046871-92c887180603?q=80&w=2070" alt="Brand Protection Operations">
+        <div class="p-ca"></div>
+      </div>
+      <div class="panel-copy">
+        <div class="panel-ghost">01</div>
+        <div class="tag">Service 01</div>
+        <h2>Brand <em>Protection</em></h2>
+        <p>Our three-phase intelligence-driven approach provides comprehensive protection against counterfeit activity, IP violations, and market infiltration. We Detect, Disrupt, and Dismantle — then monitor to prevent re-emergence.</p>
+        <p>From covert test purchases to coordinated enforcement raids with NAFDAC and state police, every action is evidence-led and legally sound — ensuring prosecutable outcomes that protect your revenue long-term.</p>
+        <div class="panel-btns">
+          <a href="contact.html#consult-form" class="btn btn-red">Request This Service <i class="fas fa-arrow-right"></i></a>
+          <a href="botlhale-solutions.html#why" class="btn btn-ob">Why BSA</a>
+        </div>
+      </div>
+    </div>
+    <!-- Feature Grid -->
+    <div class="features-wrap">
+      <div class="container">
+        <div class="features-hd">
+          <div>
+            <div class="tag">What's Included</div>
+            <h2 class="h2">The <em>Capabilities</em> Behind<br>Our Brand Protection</h2>
+          </div>
+          <p class="lead">Our brand protection team combines human intelligence, legal expertise, and agency partnerships to deliver industry-leading results.</p>
+        </div>
+        <div class="feat-grid">
+          <div class="feat rv" data-d="1">
+            <div class="feat-num">01</div>
+            <div class="fi"><i class="fas fa-chart-line"></i></div>
+            <h4>Proven 3-Phase Strategy</h4>
+            <p>A clear structured path from initial intelligence gathering through disruption to full-scale enforcement and market monitoring.</p>
+          </div>
+          <div class="feat rv" data-d="2">
+            <div class="feat-num">02</div>
+            <div class="fi"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Deep Local Expertise</h4>
+            <p>Operatives embedded in Lagos, Kano, Abuja and Port Harcourt trade hubs with fluent understanding of local market dynamics.</p>
+          </div>
+          <div class="feat rv" data-d="3">
+            <div class="feat-num">03</div>
+            <div class="fi"><i class="fas fa-gavel"></i></div>
+            <h4>Agency-Backed Enforcement</h4>
+            <p>Formal MoUs with NAFDAC, FCCPC and state police commands guarantee rapid, legally admissible enforcement action.</p>
+          </div>
+          <div class="feat rv" data-d="4">
+            <div class="feat-num">04</div>
+            <div class="fi"><i class="fas fa-satellite-dish"></i></div>
+            <h4>24/7 Market Surveillance</h4>
+            <p>Continuous monitoring of physical markets, social media, and e-commerce platforms to intercept threats before they scale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CTA -->
+    <div class="panel-cta">
+      <div class="container pci">
+        <div class="pct"><h3>PROTECT YOUR BRAND TODAY</h3><p>Our team is ready to assess your current exposure and build a tailored intelligence brief.</p></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-wh">Start Now <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+234 704 031 5768" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MYSTERY SHOPPING ========== -->
+  <div class="svc-panel" id="ms">
+    <div class="panel-hero">
+      <div class="panel-img">
+        <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b?q=80&w=2070" alt="Mystery Shopping">
+        <div class="p-ca"></div>
+      </div>
+      <div class="panel-copy">
+        <div class="panel-ghost">02</div>
+        <div class="tag">Service 02</div>
+        <h2>Mystery <em>Shopping</em> & CX Evaluation</h2>
+        <p>We employ a multi-faceted approach to mystery shopping — ensuring comprehensive, objective evaluation of customer service delivery and operational efficiency across every touchpoint your customers encounter.</p>
+        <p>Our methodology is customised for banking, retail, FMCG, and service sectors, focusing on in-person interactions, phone engagements, compliance monitoring, and digital channel assessments.</p>
+        <div class="panel-btns">
+          <a href="botlhale-solutions.html#contact" class="btn btn-red">Request This Service <i class="fas fa-arrow-right"></i></a>
+          <a href="about-botlhale-solutions.html" class="btn btn-ob">About BSA</a>
+        </div>
+      </div>
+    </div>
+    <!-- Methodology Section -->
+    <div class="method-wrap">
+      <div class="container">
+        <div>
+          <div class="tag" style="color:rgba(223,10,10,0.85);">How It Works</div>
+          <h2 class="h2" style="color:var(--white);">Our <em>Mystery Shopping</em> Methodology</h2>
+        </div>
+        <div class="method-grid">
+          <div class="method-steps">
+            <div class="ms">
+              <div class="ms-num">01</div>
+              <div>
+                <h4>Brief & KPI Design</h4>
+                <p>We work with your team to define service standards, brand promise expectations, and the specific KPIs that matter most to your business.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-num">02</div>
+              <div>
+                <h4>Shopper Deployment</h4>
+                <p>Trained, certified mystery shoppers conduct in-person visits, telephone calls, and digital channel audits across your network.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-num">03</div>
+              <div>
+                <h4>Video & Evidence Capture</h4>
+                <p>Where authorised, covert video recordings provide irrefutable documentation of service interactions for performance analysis.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-num">04</div>
+              <div>
+                <h4>Reporting & Recommendations</h4>
+                <p>Detailed scorecards, branch-level breakdowns, and actionable improvement plans are delivered to your management team.</p>
+              </div>
+            </div>
+          </div>
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?q=80&w=1600" alt="Mystery shopping analysis">
+            <div class="method-fc">
+              <div class="fn">40+</div>
+              <div class="ft">Branches<br>Audited</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Features -->
+    <div class="features-wrap">
+      <div class="container">
+        <div class="features-hd">
+          <div>
+            <div class="tag">Service Features</div>
+            <h2 class="h2">Built for <em>Measurable</em> CX Improvement</h2>
+          </div>
+          <p class="lead">Every mystery shop is designed to produce insights you can act on — not just data that sits in a report.</p>
+        </div>
+        <div class="feat-grid">
+          <div class="feat rv" data-d="1">
+            <div class="feat-num">01</div>
+            <div class="fi"><i class="fas fa-clipboard-check"></i></div>
+            <h4>Structured Evaluation Framework</h4>
+            <p>Standardised assessment tools ensure consistency across hundreds of branches and auditors.</p>
+          </div>
+          <div class="feat rv" data-d="2">
+            <div class="feat-num">02</div>
+            <div class="fi"><i class="fas fa-users"></i></div>
+            <h4>Nigerian Consumer Expertise</h4>
+            <p>Deep understanding of local consumer behaviour, expectations, and cultural context across all major states.</p>
+          </div>
+          <div class="feat rv" data-d="3">
+            <div class="feat-num">03</div>
+            <div class="fi"><i class="fas fa-sliders"></i></div>
+            <h4>Custom KPIs Per Brand</h4>
+            <p>Evaluation criteria are built around your specific brand promise, service standards, and compliance requirements.</p>
+          </div>
+          <div class="feat rv" data-d="4">
+            <div class="feat-num">04</div>
+            <div class="fi"><i class="fas fa-chart-bar"></i></div>
+            <h4>Digital Reporting Dashboards</h4>
+            <p>Real-time dashboards and trend analysis enable management to track improvement across your entire network.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-cta">
+      <div class="container pci">
+        <div class="pct"><h3>ELEVATE YOUR CUSTOMER EXPERIENCE</h3><p>Find the gaps before your customers do. Speak to our mystery shopping team today.</p></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="botlhale-solutions.html#contact" class="btn btn-wh">Start Now <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+234 704 031 5768" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MARKET RESEARCH ========== -->
+  <div class="svc-panel" id="mr">
+    <div class="panel-hero">
+      <div class="panel-img">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070" alt="Market Research">
+        <div class="p-ca"></div>
+      </div>
+      <div class="panel-copy">
+        <div class="panel-ghost">03</div>
+        <div class="tag">Service 03</div>
+        <h2>Market Research <em>& Intelligence</em></h2>
+        <p>We conduct deep, qualitative and quantitative market research giving you comprehensive understanding of market trends, illicit trade volumes, consumer behaviour, and competitive landscapes across Nigeria and West Africa.</p>
+        <p>Armed with actionable intelligence, you can navigate markets with confidence, identify growth opportunities, and stay ahead of threats before they become crises.</p>
+        <div class="panel-btns">
+          <a href="contact.html" class="btn btn-red">Request This Service <i class="fas fa-arrow-right"></i></a>
+          <a href="about-botlhale-solutions.html" class="btn btn-ob">About BSA</a>
+        </div>
+      </div>
+    </div>
+    <div class="features-wrap">
+      <div class="container">
+        <div class="features-hd">
+          <div>
+            <div class="tag">Research Capabilities</div>
+            <h2 class="h2">Intelligence That <em>Informs</em><br>Strategic Decisions</h2>
+          </div>
+          <p class="lead">Our research teams combine primary fieldwork with secondary analysis to deliver the most complete picture of your market.</p>
+        </div>
+        <div class="feat-grid">
+          <div class="feat rv" data-d="1">
+            <div class="feat-num">01</div>
+            <div class="fi"><i class="fas fa-magnifying-glass"></i></div>
+            <h4>Counterfeit Market Mapping</h4>
+            <p>Quantify the volume, geography, and supply chains of counterfeit products competing against your authentic brand.</p>
+          </div>
+          <div class="feat rv" data-d="2">
+            <div class="feat-num">02</div>
+            <div class="fi"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>On-Ground Field Research</h4>
+            <p>Researchers embedded across Nigeria's 12 key commercial cities delivering primary data with granular local accuracy.</p>
+          </div>
+          <div class="feat rv" data-d="3">
+            <div class="feat-num">03</div>
+            <div class="fi"><i class="fas fa-people-group"></i></div>
+            <h4>Consumer Behaviour Studies</h4>
+            <p>Qualitative and quantitative studies on purchasing decisions, brand perception, and counterfeit awareness.</p>
+          </div>
+          <div class="feat rv" data-d="4">
+            <div class="feat-num">04</div>
+            <div class="fi"><i class="fas fa-robot"></i></div>
+            <h4>AI-Driven Analytics</h4>
+            <p>Advanced data modelling, sentiment analysis, and trend forecasting delivered through clear, actionable reports.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-cta">
+      <div class="container pci">
+        <div class="pct"><h3>INTELLIGENCE THAT DRIVES GROWTH</h3><p>Commission a custom market research engagement tailored to your sector and geography.</p></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-wh">Commission Research <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+234 704 031 5768" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== DUE DILIGENCE ========== -->
+  <div class="svc-panel" id="dd">
+    <div class="panel-hero">
+      <div class="panel-img">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070" alt="Due Diligence">
+        <div class="p-ca"></div>
+      </div>
+      <div class="panel-copy">
+        <div class="panel-ghost">04</div>
+        <div class="tag">Service 04</div>
+        <h2>Due <em>Diligence</em> & Risk Assessment</h2>
+        <p>We conduct thorough due diligence processes, leveraging our intelligence network to assess potential risks and provide the insights needed for sound partnerships, acquisitions, and investment decisions in Nigerian and West African markets.</p>
+        <p>Our team has access to regulatory databases, law enforcement records, and on-ground networks that no standard background check service can replicate — protecting you from costly missteps.</p>
+        <div class="panel-btns">
+          <a href="contact.html" class="btn btn-red">Request This Service <i class="fas fa-arrow-right"></i></a>
+          <a href="about-botlhale-solutions.html" class="btn btn-ob">About BSA</a>
+        </div>
+      </div>
+    </div>
+    <div class="features-wrap">
+      <div class="container">
+        <div class="features-hd">
+          <div>
+            <div class="tag">What We Verify</div>
+            <h2 class="h2">Multi-Layered <em>Intelligence</em><br>Due Diligence</h2>
+          </div>
+          <p class="lead">We go far beyond public records — our operatives verify claims on the ground and through intelligence networks unavailable to standard providers.</p>
+        </div>
+        <div class="feat-grid">
+          <div class="feat rv" data-d="1">
+            <div class="feat-num">01</div>
+            <div class="fi"><i class="fas fa-id-card"></i></div>
+            <h4>Background Verification</h4>
+            <p>Identity, directorship, litigation history, regulatory sanctions, and criminal record checks across multiple databases.</p>
+          </div>
+          <div class="feat rv" data-d="2">
+            <div class="feat-num">02</div>
+            <div class="fi"><i class="fas fa-building"></i></div>
+            <h4>Corporate Intelligence</h4>
+            <p>Ownership structure analysis, beneficial ownership identification, and subsidiary mapping for complex corporate groups.</p>
+          </div>
+          <div class="feat rv" data-d="3">
+            <div class="feat-num">03</div>
+            <div class="fi"><i class="fas fa-triangle-exclamation"></i></div>
+            <h4>Risk Scoring</h4>
+            <p>Sector-calibrated risk scores based on regulatory exposure, reputational risk, financial health, and market conduct.</p>
+          </div>
+          <div class="feat rv" data-d="4">
+            <div class="feat-num">04</div>
+            <div class="fi"><i class="fas fa-database"></i></div>
+            <h4>Proprietary Compliance Data</h4>
+            <p>Access to our proprietary West African compliance and enforcement database built over 12 years of field operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-cta">
+      <div class="container pci">
+        <div class="pct"><h3>KNOW WHO YOU'RE DEALING WITH</h3><p>Don't risk your business on unverified partners. Commission a due diligence report today.</p></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-wh">Start Due Diligence <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+234 704 031 5768" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== BRAND AWARENESS ========== -->
+  <div class="svc-panel" id="ba">
+    <div class="panel-hero">
+      <div class="panel-img">
+        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=2070" alt="Brand Awareness">
+        <div class="p-ca"></div>
+      </div>
+      <div class="panel-copy">
+        <div class="panel-ghost">05</div>
+        <div class="tag">Service 05</div>
+        <h2>Brand <em>Awareness</em> Campaigns</h2>
+        <p>Effective brand protection goes beyond enforcement. Building strong brand awareness is a critical component in deterring counterfeit activity and reinforcing the authenticity and integrity of your products in the marketplace.</p>
+        <p>By increasing public recognition and trust through strategic brand communication, consumer education, and market visibility, we help ensure consumers can easily identify and differentiate genuine products from fakes — creating a more resilient brand presence.</p>
+        <div class="panel-btns">
+          <a href="contact.html" class="btn btn-red">Request This Service <i class="fas fa-arrow-right"></i></a>
+          <a href="about-botlhale-solutions.html" class="btn btn-ob">About BSA</a>
+        </div>
+      </div>
+    </div>
+    <div class="features-wrap">
+      <div class="container">
+        <div class="features-hd">
+          <div>
+            <div class="tag">Campaign Capabilities</div>
+            <h2 class="h2">Awareness That <em>Deters</em><br>Counterfeiting</h2>
+          </div>
+          <p class="lead">Our campaigns educate consumers, empower distributors, and communicate the value of authenticity — making your genuine products the clear choice.</p>
+        </div>
+        <div class="feat-grid">
+          <div class="feat rv" data-d="1">
+            <div class="feat-num">01</div>
+            <div class="fi"><i class="fas fa-megaphone"></i></div>
+            <h4>Consumer Education Campaigns</h4>
+            <p>Targeted communications teaching consumers how to identify authentic products and the risks of counterfeit alternatives.</p>
+          </div>
+          <div class="feat rv" data-d="2">
+            <div class="feat-num">02</div>
+            <div class="fi"><i class="fas fa-store"></i></div>
+            <h4>Trade Hub Activations</h4>
+            <p>Market-level education programmes at Alaba, Ariaria, Kano Kurmi, and other major Nigerian trade hubs.</p>
+          </div>
+          <div class="feat rv" data-d="3">
+            <div class="feat-num">03</div>
+            <div class="fi"><i class="fas fa-qrcode"></i></div>
+            <h4>Digital Verification Tools</h4>
+            <p>QR codes, holographic labels, and authentication apps that allow consumers to verify product authenticity instantly.</p>
+          </div>
+          <div class="feat rv" data-d="4">
+            <div class="feat-num">04</div>
+            <div class="fi"><i class="fas fa-bullseye"></i></div>
+            <h4>Integrated IP Enforcement</h4>
+            <p>Awareness campaigns are coordinated with enforcement operations for a dual approach that protects brand from all angles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-cta">
+      <div class="container pci">
+        <div class="pct"><h3>MAKE YOUR AUTHENTIC BRAND UNMISTAKABLE</h3><p>Build the consumer awareness that makes counterfeiting commercially unviable.</p></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-wh">Plan a Campaign <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+234 704 031 5768" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== LAW ENFORCEMENT TRAINING ========== -->
+  <div class="svc-panel" id="lt">
+    <div class="panel-hero">
+      <div class="panel-img">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070" alt="Law Enforcement Training">
+        <div class="p-ca"></div>
+      </div>
+      <div class="panel-copy">
+        <div class="panel-ghost">06</div>
+        <div class="tag">Service 06</div>
+        <h2>Law Enforcement <em>& Corporate Training</em></h2>
+        <p>We offer tailored capacity-building programmes designed for law enforcement agencies and corporate compliance teams. Our programmes enhance the ability of officers and regulatory bodies to identify, investigate, and prosecute counterfeiting, IP violations, and commercial fraud.</p>
+        <p>For corporations, our training sessions empower teams with the knowledge to safeguard intellectual assets, foster customer trust, minimise risk exposure, and implement proactive fraud prevention strategies.</p>
+        <div class="panel-btns">
+          <a href="contact.html" class="btn btn-red">Request This Service <i class="fas fa-arrow-right"></i></a>
+          <a href="about-botlhale-solutions.html" class="btn btn-ob">About BSA</a>
+        </div>
+      </div>
+    </div>
+    <!-- Methodology for Training -->
+    <div class="method-wrap">
+      <div class="container">
+        <div>
+          <div class="tag" style="color:rgba(223,10,10,0.85);">Training Tracks</div>
+          <h2 class="h2" style="color:var(--white);">Two Dedicated <em>Training Programmes</em></h2>
+        </div>
+        <div class="method-grid">
+          <div class="method-steps">
+            <div class="ms">
+              <div class="ms-num">A</div>
+              <div>
+                <h4>Law Enforcement Training</h4>
+                <p>IP law, counterfeit detection techniques, evidence gathering, inter-agency collaboration, and case management for NAFDAC, customs, and police units.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-num">B</div>
+              <div>
+                <h4>Corporate Compliance Training</h4>
+                <p>Brand protection, regulatory compliance, fraud detection, vulnerability assessment, and proactive risk prevention for internal teams.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-num">C</div>
+              <div>
+                <h4>Certified Curriculum</h4>
+                <p>All programmes are designed around internationally recognised IP law frameworks and practical Nigerian market realities.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-num">D</div>
+              <div>
+                <h4>Case Simulation Tools</h4>
+                <p>Participants work through real-world case simulations — counterfeit seizures, undercover scenarios, and prosecution preparation exercises.</p>
+              </div>
+            </div>
+          </div>
+          <div class="method-img">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1600" alt="Corporate training workshop">
+            <div class="method-fc">
+              <div class="fn">500+</div>
+              <div class="ft">Officers<br>Trained</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="features-wrap">
+      <div class="container">
+        <div class="features-hd">
+          <div>
+            <div class="tag">Programme Features</div>
+            <h2 class="h2">Training That <em>Builds</em><br>Real Capability</h2>
+          </div>
+          <p class="lead">Every training module is grounded in real Nigerian enforcement operations — not theoretical frameworks imported from abroad.</p>
+        </div>
+        <div class="feat-grid">
+          <div class="feat rv" data-d="1">
+            <div class="feat-num">01</div>
+            <div class="fi"><i class="fas fa-certificate"></i></div>
+            <h4>Certified Curriculum</h4>
+            <p>Internationally-aligned training modules adapted specifically for West African legal frameworks and market realities.</p>
+          </div>
+          <div class="feat rv" data-d="2">
+            <div class="feat-num">02</div>
+            <div class="fi"><i class="fas fa-handshake-angle"></i></div>
+            <h4>NAFDAC & Police Experience</h4>
+            <p>Training delivered by ex-law enforcement professionals who have led actual operations across Nigeria's major markets.</p>
+          </div>
+          <div class="feat rv" data-d="3">
+            <div class="feat-num">03</div>
+            <div class="fi"><i class="fas fa-layer-group"></i></div>
+            <h4>Bespoke Corporate Modules</h4>
+            <p>Compliance and fraud prevention training tailored to your sector, risk profile, and organisational structure.</p>
+          </div>
+          <div class="feat rv" data-d="4">
+            <div class="feat-num">04</div>
+            <div class="fi"><i class="fas fa-computer"></i></div>
+            <h4>Case Simulation Tools</h4>
+            <p>Immersive exercises built around real-world counterfeit seizure scenarios, evidence management, and prosecution preparation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-cta">
+      <div class="container pci">
+        <div class="pct"><h3>BUILD CAPABILITY THAT LASTS</h3><p>Commission a training programme tailored to your agency or corporate team's specific needs.</p></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="botlhale-solutions.html#contact" class="btn btn-wh">Enquire About Training <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+234 704 031 5768" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end svc-area -->
+
+<!-- ===== ALL SERVICES OVERVIEW ===== -->
+<section class="overview-sec sp">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;gap:40px;flex-wrap:wrap;">
+      <div>
+        <div class="tag">Full Portfolio</div>
+        <h2 class="h2">All <em>Six Services</em> at a Glance</h2>
+      </div>
+      <p class="lead">Every service is designed to work independently or as part of an integrated brand protection strategy.</p>
+    </div>
+    <div class="ov-grid">
+      <div class="ovc rv" data-d="1" onclick="switchAndScroll('bp')">
+        <div class="ovc-num">01</div>
+        <div class="ovc-icon"><i class="fas fa-shield-halved"></i></div>
+        <h3>Brand Protection</h3>
+        <p>Intelligence-led three-phase enforcement to detect, disrupt, and dismantle counterfeit networks targeting your brand.</p>
+        <div class="ovc-link">Explore <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="ovc rv" data-d="2" onclick="switchAndScroll('ms')">
+        <div class="ovc-num">02</div>
+        <div class="ovc-icon"><i class="fas fa-user-secret"></i></div>
+        <h3>Mystery Shopping</h3>
+        <p>Objective customer experience evaluation across every touchpoint — revealing the gaps your internal audits miss.</p>
+        <div class="ovc-link">Explore <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="ovc rv" data-d="3" onclick="switchAndScroll('mr')">
+        <div class="ovc-num">03</div>
+        <div class="ovc-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Market Research</h3>
+        <p>Deep market intelligence on trends, illicit trade volumes, consumer behaviour, and competitive landscape.</p>
+        <div class="ovc-link">Explore <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="ovc rv" data-d="4" onclick="switchAndScroll('dd')">
+        <div class="ovc-num">04</div>
+        <div class="ovc-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+        <h3>Due Diligence</h3>
+        <p>Multi-layered background verification and corporate intelligence to protect partnerships and investments.</p>
+        <div class="ovc-link">Explore <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="ovc rv" data-d="5" onclick="switchAndScroll('ba')">
+        <div class="ovc-num">05</div>
+        <div class="ovc-icon"><i class="fas fa-bullhorn"></i></div>
+        <h3>Brand Awareness</h3>
+        <p>Consumer education campaigns and digital verification tools that make counterfeiting commercially unviable.</p>
+        <div class="ovc-link">Explore <i class="fas fa-arrow-right"></i></div>
+      </div>
+      <div class="ovc rv" data-d="6" onclick="switchAndScroll('lt')">
+        <div class="ovc-num">06</div>
+        <div class="ovc-icon"><i class="fas fa-chalkboard-user"></i></div>
+        <h3>LE & Corporate Training</h3>
+        <p>Certified capacity-building programmes for enforcement agencies and corporate compliance teams.</p>
+        <div class="ovc-link">Explore <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-s">
+  <div class="container cta-in">
+    <div class="cta-t">
+      <h2>READY TO PROTECT YOUR BRAND?</h2>
+      <p>Schedule a confidential consultation with our intelligence team today.</p>
+    </div>
+    <div class="cta-bs">
+      <a href="contact.html" class="btn btn-wh">Request Consultation <i class="fas fa-arrow-right"></i></a>
+      <a href="tel:+234 704 031 5768" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contact">
+  <div class="container">
+    <div class="fm">
+      <div class="fb">
+        <div class="flm">BS</div>
+        <p>Nigeria's foremost brand protection and intelligence consultancy. Safeguarding IP, recovering revenue, and upholding market integrity across West Africa.</p>
+        <div class="sr">
+          <a href="#" class="so"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="so"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="so"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="so"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="fc2">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#" onclick="switchAndScroll('bp')">Brand Protection</a></li>
+          <li><a href="#" onclick="switchAndScroll('ms')">Mystery Shopping</a></li>
+          <li><a href="#" onclick="switchAndScroll('mr')">Market Research</a></li>
+          <li><a href="#" onclick="switchAndScroll('dd')">Due Diligence</a></li>
+          <li><a href="#" onclick="switchAndScroll('ba')">Brand Awareness</a></li>
+          <li><a href="#" onclick="switchAndScroll('lt')">LE Training</a></li>
+        </ul>
+      </div>
+      <div class="fc2">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about-botlhale-solutions.html">About BSA Nigeria</a></li>
+          <li><a href="botlhale-solutions.html#process">Our Process</a></li>
+          <li><a href="botlhale-solutions.html#why">Why Choose Us</a></li>
+          <li><a href="botlhale-solutions.html#gallery">Field Operations</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News & Insights</a></li>
+        </ul>
+      </div>
+      <div class="fc2 ci2">
+        <h5>Contact Us</h5>
+        <p><i class="fas fa-map-marker-alt"></i>Lagos, Nigeria</p>
+        <p><i class="fas fa-phone-alt"></i><a href="tel:+234 704 031 5768" style="color:rgba(255,255,255,0.36);">+234 704 031 5768</a></p>
+        <p><i class="fas fa-envelope"></i><a href="mailto:m.ogwu@botlhalesolutions.com" style="color:rgba(255,255,255,0.36);">m.ogwu@botlhalesolutions.com</a></p>
+        <div class="nlf" style="margin-top:14px;">
+          <input type="email" id="nle" placeholder="Your email address">
+          <button id="nlb">Get Industry Alerts</button>
+        </div>
+      </div>
+    </div>
+    <div class="fb2">
+      <p>© 2025 Botlhale Solutions Nigeria Ltd. All rights reserved.</p>
+      <div class="lg-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="bt" id="bt"><i class="fas fa-chevron-up"></i></div>
+
+<script>
+/* ---- Header scroll ---- */
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>{
+  hdr.classList.toggle('sc',window.scrollY>60);
+  document.getElementById('bt').classList.toggle('v',window.scrollY>400);
+  /* Update sticky nav top offset when header shrinks */
+  const svcNav=document.getElementById('svc-nav');
+  if(svcNav) svcNav.style.top = window.scrollY>60 ? '66px' : '80px';
+});
+
+/* ---- Mobile menu ---- */
+const hbg=document.getElementById('hbg'),mm=document.getElementById('mm');
+hbg.addEventListener('click',()=>{hbg.classList.toggle('op');mm.classList.toggle('op');});
+mm.querySelectorAll('a').forEach(el=>el.addEventListener('click',()=>{hbg.classList.remove('op');mm.classList.remove('op');}));
+
+/* ---- Service switcher ---- */
+const navBtns=document.querySelectorAll('.snb');
+const panels=document.querySelectorAll('.svc-panel');
+
+function switchSvc(id){
+  panels.forEach(p=>{p.classList.remove('act');});
+  navBtns.forEach(b=>{b.classList.remove('act');});
+  const p=document.getElementById(id);
+  if(p){p.classList.add('act');}
+  const b=document.querySelector(`.snb[data-svc="${id}"]`);
+  if(b){
+    b.classList.add('act');
+    /* Scroll button into view in the nav bar */
+    b.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  }
+  /* Re-trigger reveal for newly active panel */
+  setTimeout(()=>{
+    p.querySelectorAll('.rv,.rl,.rr').forEach(el=>{
+      if(!el.classList.contains('iv')){
+        revObs.observe(el);
+      }
+    });
+  },50);
+}
+
+function switchAndScroll(id){
+  switchSvc(id);
+  const svcNav=document.getElementById('svc-nav');
+  if(svcNav) svcNav.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+navBtns.forEach(b=>b.addEventListener('click',()=>{
+  const id=b.getAttribute('data-svc');
+  if(id) switchSvc(id);
+}));
+
+/* ---- Counter animation ---- */
+function cnt(el){
+  const t=+el.dataset.count,s=el.dataset.sfx||'';
+  let v=0;const step=t/(1600/16);
+  const i=setInterval(()=>{v=Math.min(v+step,t);el.textContent=Math.floor(v).toLocaleString()+s;if(v>=t)clearInterval(i);},16);
+}
+let done=false;
+const strip=document.querySelector('.ph-strip');
+if(strip){
+  new IntersectionObserver(([e])=>{
+    if(e.isIntersecting&&!done){done=true;document.querySelectorAll('.n[data-count]').forEach(cnt);}
+  },{threshold:0.3}).observe(strip);
+}
+
+/* ---- Scroll reveal ---- */
+const revObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('iv');revObs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.rv,.rl,.rr').forEach(el=>revObs.observe(el));
+
+/* ---- Smooth scroll for same-page anchors ---- */
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+}));
+
+/* ---- Back to top ---- */
+document.getElementById('bt').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ---- Newsletter ---- */
+document.getElementById('nlb').addEventListener('click',()=>{
+  const e=document.getElementById('nle').value.trim(),b=document.getElementById('nlb');
+  if(e&&e.includes('@')){
+    b.textContent='✓ Subscribed!';b.style.background='#1a6e38';
+    setTimeout(()=>{b.textContent='Get Industry Alerts';b.style.background='';document.getElementById('nle').value='';},3000);
+  }else{
+    b.textContent='Enter valid email';b.style.background='#7a1a1a';
+    setTimeout(()=>{b.textContent='Get Industry Alerts';b.style.background='';},2500);
+  }
+});
+
+/* ---- Set initial svc-nav top ---- */
+document.getElementById('svc-nav').style.top='80px';
+</script>
+</body>
+</html>

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Consultation | Botlhale Solutions Nigeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+:root{
+  --red:#df0a0a;--red-deep:#b30808;--red-pale:#fdf1f1;--red-tint:rgba(223,10,10,0.07);
+  --black:#0e0e0e;--ink:#1a1a1a;--charcoal:#2d2d2d;--mid:#666;--muted:#999;
+  --border:#e6e6e6;--white:#ffffff;--off:#f7f7f7;--light:#f0f0f0;
+  --ff-d:'Cormorant Garamond',serif;--ff-t:'Bebas Neue',sans-serif;--ff-b:'DM Sans',sans-serif;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+  --sh-s:0 6px 24px rgba(0,0,0,0.07);--sh-m:0 18px 52px rgba(0,0,0,0.11);--sh-r:0 10px 36px rgba(223,10,10,0.25);
+}
+
+body{font-family:var(--ff-b);color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden;}
+img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}ul{list-style:none;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--light);}::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px;}
+
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+.sp{padding:110px 0;}.sp-sm{padding:70px 0;}
+.tag{display:inline-flex;align-items:center;gap:9px;font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+.tag::before{content:'';width:22px;height:2px;background:var(--red);flex-shrink:0;}
+.h2{font-family:var(--ff-d);font-size:clamp(2.1rem,4vw,3.3rem);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:18px;}
+.h2 em{font-style:italic;color:var(--red);}
+.lead{font-size:0.98rem;color:var(--mid);line-height:1.85;max-width:570px;}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--ff-b);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:13px 30px;border-radius:2px;border:none;cursor:pointer;transition:all 0.3s var(--ease);}
+.btn i{transition:transform 0.25s;}.btn:hover i{transform:translateX(4px);}
+.btn-red{background:var(--red);color:var(--white);box-shadow:var(--sh-r);}
+.btn-red:hover{background:var(--red-deep);transform:translateY(-2px);}
+.btn-ob{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+.btn-ob:hover{background:var(--ink);color:var(--white);}
+.btn-ow{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.4);}
+.btn-ow:hover{background:rgba(255,255,255,0.1);border-color:var(--white);}
+.btn-wh{background:var(--white);color:var(--red);box-shadow:0 8px 28px rgba(0,0,0,0.13);}
+.btn-wh:hover{background:var(--off);transform:translateY(-2px);}
+
+/* ===================== HEADER ===================== */
+header{position:fixed;top:0;left:0;right:0;z-index:999;transition:all 0.4s var(--ease);}
+header.sc{background:rgba(255,255,255,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--border),var(--sh-s);}
+.ni{display:flex;align-items:center;justify-content:space-between;padding:20px 0;transition:padding 0.3s;}
+header.sc .ni{padding:13px 0;}
+.logo{display:flex;align-items:center;gap:12px;}
+.lm{width:40px;height:40px;background:var(--red);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-t);font-size:17px;color:var(--white);letter-spacing:1px;flex-shrink:0;transition:background 0.2s;}
+.lm:hover{background:var(--red-deep);}
+.lt .br{font-family:var(--ff-d);font-size:1.15rem;font-weight:700;color:var(--white);line-height:1;transition:color 0.3s;}
+header.sc .lt .br{color:var(--ink);}
+.lt .sb{font-size:0.58rem;color:rgba(255,255,255,0.5);letter-spacing:0.14em;text-transform:uppercase;margin-top:3px;transition:color 0.3s;}
+header.sc .lt .sb{color:var(--muted);}
+.nav-ul{display:flex;align-items:center;gap:2rem;}
+.nav-ul a{font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.72);transition:color 0.2s;position:relative;padding-bottom:3px;}
+.nav-ul a::after{content:'';position:absolute;bottom:-1px;left:0;right:100%;height:2px;background:var(--red);transition:right 0.3s var(--ease);}
+.nav-ul a:hover,.nav-ul a.active{color:var(--white);}
+.nav-ul a:hover::after,.nav-ul a.active::after{right:0;}
+header.sc .nav-ul a{color:var(--charcoal);}
+header.sc .nav-ul a:hover,header.sc .nav-ul a.active{color:var(--ink);}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:3px;}
+.hbg span{display:block;width:24px;height:2px;background:var(--white);transition:all 0.3s;}
+header.sc .hbg span{background:var(--ink);}
+.hbg.op span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hbg.op span:nth-child(2){opacity:0;}
+.hbg.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mm{display:none;position:fixed;inset:0;background:var(--ink);z-index:998;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;}
+.mm.op{display:flex;}
+.mm a{font-family:var(--ff-d);font-size:2rem;font-weight:600;color:var(--white);transition:color 0.2s;}
+.mm a:hover,.mm a.active{color:var(--red);}
+
+/* ===================== PAGE HERO ===================== */
+.page-hero{position:relative;min-height:60vh;display:flex;flex-direction:column;background:var(--black);overflow:hidden;}
+.ph-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070');background-size:cover;background-position:center 25%;animation:phz 18s ease-in-out infinite alternate;opacity:0.25;}
+@keyframes phz{from{transform:scale(1);}to{transform:scale(1.06);}}
+.ph-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:70px 70px;}
+.ph-bar{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,transparent,var(--red),transparent);}
+.ph-slice{position:absolute;right:0;top:0;bottom:0;width:36%;background:var(--red);clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);opacity:0.055;}
+
+.ph-body{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:flex-end;}
+.ph-inner{padding:165px 0 0;}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:26px;}
+.breadcrumb a{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--red);}
+.breadcrumb .sep{color:rgba(255,255,255,0.2);font-size:0.55rem;}
+.breadcrumb .cur{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);}
+.ph-title{font-family:var(--ff-t);font-size:clamp(3.5rem,9vw,7.5rem);line-height:0.9;letter-spacing:0.02em;color:var(--white);margin-bottom:22px;}
+.ph-title .ac{color:var(--red);}
+.ph-sub{font-size:1rem;color:rgba(255,255,255,0.55);line-height:1.8;max-width:500px;margin-bottom:44px;}
+.ph-actions{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:56px;}
+
+/* Kicker pill */
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;background:rgba(223,10,10,0.1);border:1px solid rgba(223,10,10,0.28);border-radius:2px;padding:6px 16px;font-size:0.67rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,100,100,0.88);margin-bottom:26px;}
+.hero-kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:bl 1.8s ease-in-out infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:0.2;}}
+
+/* ===================== MAIN CONTACT SECTION ===================== */
+.contact-main{background:var(--white);}
+.contact-grid{display:grid;grid-template-columns:1fr 1.55fr;gap:0;min-height:780px;}
+
+/* LEFT — info panel */
+.contact-info-panel{
+  background:var(--ink);
+  padding:72px 56px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+/* Red accent stripe */
+.contact-info-panel::before{content:'';position:absolute;top:0;left:0;width:5px;height:100%;background:var(--red);}
+/* Ghost text */
+.contact-info-panel::after{content:'BSA';font-family:var(--ff-t);font-size:14rem;color:rgba(255,255,255,0.025);position:absolute;bottom:-20px;right:-20px;line-height:1;pointer-events:none;}
+
+.cip-top .tag{color:rgba(223,10,10,0.85);}
+.cip-top .tag::before{background:var(--red);}
+.cip-top h2{font-family:var(--ff-d);font-size:clamp(1.9rem,3vw,2.8rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:16px;}
+.cip-top h2 em{font-style:italic;color:var(--red);}
+.cip-top p{font-size:0.9rem;color:rgba(255,255,255,0.45);line-height:1.82;max-width:340px;margin-bottom:48px;}
+
+/* Contact detail items */
+.c-items{display:flex;flex-direction:column;gap:0;position:relative;z-index:1;}
+.c-item{
+  display:flex;align-items:flex-start;gap:18px;
+  padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.06);
+  transition:all 0.25s;
+}
+.c-item:last-child{border-bottom:none;}
+.c-item:hover{padding-left:6px;}
+.c-icon{
+  width:44px;height:44px;border-radius:4px;
+  background:var(--red-tint);border:1px solid rgba(223,10,10,0.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;color:var(--red);flex-shrink:0;
+  transition:all 0.25s;
+}
+.c-item:hover .c-icon{background:var(--red);color:var(--white);border-color:var(--red);}
+.c-label{font-size:0.66rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:5px;}
+.c-val{font-size:0.9rem;color:rgba(255,255,255,0.8);font-weight:600;line-height:1.5;}
+.c-val a{color:rgba(255,255,255,0.8);transition:color 0.2s;}
+.c-val a:hover{color:var(--red);}
+.c-sub{font-size:0.78rem;color:rgba(255,255,255,0.35);margin-top:2px;}
+
+/* Social row */
+.cip-bottom{position:relative;z-index:1;}
+.c-social-label{font-size:0.66rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px;}
+.c-socials{display:flex;gap:10px;}
+.cs{width:38px;height:38px;border-radius:3px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.35);font-size:0.85rem;transition:all 0.2s;}
+.cs:hover{background:var(--red);color:var(--white);border-color:var(--red);}
+
+/* Response time badge */
+.response-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(223,10,10,0.1);border:1px solid rgba(223,10,10,0.2);
+  border-radius:2px;padding:12px 18px;margin-bottom:36px;
+}
+.rb-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:bl 1.8s ease-in-out infinite;}
+.rb-text{font-size:0.74rem;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:0.06em;}
+.rb-text strong{color:var(--red);}
+
+/* RIGHT — form panel */
+.contact-form-panel{
+  background:var(--white);
+  padding:72px 64px;
+  border-left:2px solid var(--border);
+}
+
+.form-head{margin-bottom:40px;}
+.form-head .tag{color:var(--red);}
+.form-head h2{font-family:var(--ff-d);font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:12px;}
+.form-head h2 em{font-style:italic;color:var(--red);}
+.form-head p{font-size:0.88rem;color:var(--mid);line-height:1.75;}
+
+/* Service selector tabs */
+.svc-selector{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+.ss-btn{
+  padding:8px 16px;border:1.5px solid var(--border);border-radius:2px;
+  font-family:var(--ff-b);font-size:0.74rem;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);
+  background:transparent;cursor:pointer;transition:all 0.22s;
+}
+.ss-btn:hover{border-color:var(--red);color:var(--red);}
+.ss-btn.sel{background:var(--red);color:var(--white);border-color:var(--red);}
+
+/* Form fields */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+.form-row.full{grid-template-columns:1fr;}
+
+.field{display:flex;flex-direction:column;gap:7px;}
+.field label{font-size:0.73rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--charcoal);}
+.field label span{color:var(--red);}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;padding:13px 16px;
+  font-family:var(--ff-b);font-size:0.88rem;color:var(--ink);
+  background:var(--off);border:1.5px solid var(--border);border-radius:2px;
+  outline:none;transition:all 0.25s var(--ease);
+  appearance:none;-webkit-appearance:none;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  background:var(--white);border-color:var(--red);
+  box-shadow:0 0 0 3px rgba(223,10,10,0.08);
+}
+.field input::placeholder,
+.field textarea::placeholder{color:var(--muted);}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:42px;cursor:pointer;}
+.field textarea{resize:vertical;min-height:130px;line-height:1.6;}
+
+/* Urgency radio */
+.urgency-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;}
+.urg-opt{flex:1;min-width:100px;}
+.urg-opt input[type=radio]{display:none;}
+.urg-opt label{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:2px;
+  font-size:0.76rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--muted);cursor:pointer;transition:all 0.22s;text-align:center;
+}
+.urg-opt input:checked + label{background:var(--ink);color:var(--white);border-color:var(--ink);}
+.urg-opt.urgent input:checked + label{background:var(--red);border-color:var(--red);}
+
+/* Consent checkbox */
+.consent-row{display:flex;align-items:flex-start;gap:12px;margin:20px 0;}
+.consent-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--red);flex-shrink:0;margin-top:2px;cursor:pointer;}
+.consent-row label{font-size:0.8rem;color:var(--mid);line-height:1.6;cursor:pointer;}
+.consent-row label a{color:var(--red);border-bottom:1px solid transparent;transition:border-color 0.2s;}
+.consent-row label a:hover{border-color:var(--red);}
+
+/* Submit button */
+.form-submit-row{display:flex;align-items:center;gap:16px;margin-top:8px;flex-wrap:wrap;}
+.submit-btn{
+  flex:1;min-width:200px;
+  background:var(--red);color:var(--white);
+  border:none;border-radius:2px;padding:16px 32px;
+  font-family:var(--ff-b);font-size:0.85rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;
+  cursor:pointer;transition:all 0.3s var(--ease);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  box-shadow:var(--sh-r);
+}
+.submit-btn:hover{background:var(--red-deep);transform:translateY(-2px);box-shadow:0 16px 44px rgba(223,10,10,0.35);}
+.submit-btn .s-icon{transition:transform 0.25s;}
+.submit-btn:hover .s-icon{transform:translateX(4px);}
+.submit-btn.loading{pointer-events:none;opacity:0.75;}
+
+.or-call{font-size:0.78rem;color:var(--muted);}
+.or-call a{color:var(--red);font-weight:700;border-bottom:1px solid transparent;transition:border-color 0.2s;}
+.or-call a:hover{border-color:var(--red);}
+
+/* Success state */
+.form-success{
+  display:none;text-align:center;padding:60px 40px;
+}
+.form-success.show{display:flex;flex-direction:column;align-items:center;gap:20px;}
+.success-icon{
+  width:72px;height:72px;border-radius:50%;
+  background:rgba(26,110,56,0.1);border:2px solid rgba(26,110,56,0.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.8rem;color:#1a6e38;
+  animation:popIn 0.5s var(--ease) both;
+}
+@keyframes popIn{from{transform:scale(0.5);opacity:0;}to{transform:scale(1);opacity:1;}}
+.form-success h3{font-family:var(--ff-d);font-size:1.8rem;font-weight:700;color:var(--ink);}
+.form-success p{font-size:0.9rem;color:var(--mid);max-width:380px;line-height:1.75;}
+.form-success .ref{font-family:var(--ff-t);font-size:1.1rem;letter-spacing:0.1em;color:var(--red);margin-top:4px;}
+
+/* ===================== QUICK CONTACT CARDS ===================== */
+.quick-contact{background:var(--off);padding:80px 0;}
+.qc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:52px;}
+.qcc{
+  background:var(--white);padding:44px 36px;
+  position:relative;overflow:hidden;
+  border-top:3px solid transparent;
+  transition:all 0.35s var(--ease);
+}
+.qcc::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 0.4s var(--ease);}
+.qcc:hover{transform:translateY(-8px);box-shadow:var(--sh-m);}
+.qcc:hover::before{transform:scaleX(1);}
+.qcc-icon{width:54px;height:54px;border-radius:4px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:22px;transition:all 0.3s;}
+.qcc:hover .qcc-icon{background:var(--red);color:var(--white);}
+.qcc h4{font-family:var(--ff-d);font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:9px;}
+.qcc p{font-size:0.84rem;color:var(--mid);line-height:1.75;margin-bottom:20px;}
+.qcc-action{display:inline-flex;align-items:center;gap:8px;font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--red);transition:gap 0.2s;}
+.qcc:hover .qcc-action{gap:14px;}
+.qcc-action i{transition:transform 0.25s;}
+.qcc:hover .qcc-action i{transform:translateX(3px);}
+
+/* ===================== WHY CONSULT BSA ===================== */
+.why-consult{background:var(--ink);}
+.wc-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center;}
+.wc-img{position:relative;border-radius:2px;overflow:hidden;aspect-ratio:4/3;}
+.wc-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.82);}
+.wc-img::after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--red);}
+.wc-badge{position:absolute;bottom:-18px;right:-18px;background:var(--red);padding:20px 24px;border-radius:2px;box-shadow:var(--sh-r);}
+.wc-badge .bn{font-family:var(--ff-t);font-size:2.4rem;color:var(--white);line-height:1;}
+.wc-badge .bl{font-size:0.68rem;font-weight:700;color:rgba(255,255,255,0.72);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;}
+.wc-copy .tag{color:rgba(223,10,10,0.85);}
+.wc-copy .tag::before{background:var(--red);}
+.wc-copy .h2{color:var(--white);}
+.wc-copy .lead{color:rgba(255,255,255,0.45);}
+.wc-points{display:flex;flex-direction:column;gap:13px;margin-top:30px;}
+.wcp{display:flex;align-items:flex-start;gap:15px;padding:17px 20px;border:1px solid rgba(255,255,255,0.055);border-radius:2px;background:rgba(255,255,255,0.02);transition:all 0.3s;}
+.wcp:hover{border-color:rgba(223,10,10,0.28);transform:translateX(5px);background:rgba(223,10,10,0.04);}
+.wcp-ic{width:38px;height:38px;border-radius:4px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:0.88rem;flex-shrink:0;transition:all 0.2s;}
+.wcp:hover .wcp-ic{background:var(--red);color:var(--white);}
+.wcp h5{font-size:0.9rem;font-weight:700;color:var(--white);margin-bottom:4px;}
+.wcp p{font-size:0.81rem;color:rgba(255,255,255,0.38);line-height:1.62;}
+
+/* ===================== FAQ ===================== */
+.faq-sec{background:var(--white);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px;}
+.faq-list{display:flex;flex-direction:column;gap:0;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px 0;cursor:pointer;
+  font-family:var(--ff-d);font-size:1.1rem;font-weight:600;color:var(--ink);
+  gap:16px;transition:color 0.2s;
+  user-select:none;
+}
+.faq-q:hover{color:var(--red);}
+.faq-q .fq-icon{
+  width:30px;height:30px;border-radius:50%;
+  border:1.5px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:0.7rem;color:var(--muted);
+  transition:all 0.3s;
+}
+.faq-item.open .faq-q{color:var(--red);}
+.faq-item.open .fq-icon{background:var(--red);border-color:var(--red);color:var(--white);transform:rotate(45deg);}
+.faq-a{display:none;padding:0 0 22px;font-size:0.88rem;color:var(--mid);line-height:1.78;}
+.faq-item.open .faq-a{display:block;animation:fadeA 0.3s var(--ease);}
+@keyframes fadeA{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
+
+/* FAQ aside */
+.faq-aside{
+  background:var(--ink);border-radius:2px;padding:48px 44px;
+  position:sticky;top:120px;
+}
+.faq-aside h3{font-family:var(--ff-d);font-size:1.6rem;font-weight:700;color:var(--white);margin-bottom:14px;line-height:1.15;}
+.faq-aside h3 em{font-style:italic;color:var(--red);}
+.faq-aside p{font-size:0.86rem;color:rgba(255,255,255,0.42);line-height:1.75;margin-bottom:28px;}
+.faq-aside .btn-red{width:100%;justify-content:center;}
+.faq-aside .divider{display:flex;align-items:center;gap:14px;margin:20px 0;}
+.faq-aside .divider::before,.faq-aside .divider::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.07);}
+.faq-aside .divider span{font-size:0.7rem;color:rgba(255,255,255,0.25);letter-spacing:0.1em;text-transform:uppercase;}
+.direct-contact{display:flex;flex-direction:column;gap:12px;}
+.dc{display:flex;align-items:center;gap:13px;padding:14px 18px;border:1px solid rgba(255,255,255,0.07);border-radius:2px;transition:all 0.25s;cursor:pointer;}
+.dc:hover{border-color:rgba(223,10,10,0.3);background:rgba(223,10,10,0.04);}
+.dc-ic{width:36px;height:36px;border-radius:4px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;}
+.dc-text .dl{font-size:0.65rem;color:rgba(255,255,255,0.28);letter-spacing:0.1em;text-transform:uppercase;}
+.dc-text .dv{font-size:0.84rem;color:rgba(255,255,255,0.7);font-weight:600;margin-top:2px;}
+.dc-text .dv a{color:rgba(255,255,255,0.7);transition:color 0.2s;}
+.dc-text .dv a:hover{color:var(--red);}
+
+/* ===================== CTA BANNER ===================== */
+.cta-s{background:var(--red);padding:86px 0;position:relative;overflow:hidden;}
+.cta-s::before{content:'BSA';font-family:var(--ff-t);font-size:18rem;color:rgba(0,0,0,0.07);position:absolute;right:-50px;top:50%;transform:translateY(-50%);line-height:1;pointer-events:none;}
+.cta-s::after{content:'';position:absolute;left:-6%;right:74%;top:0;bottom:0;background:rgba(255,255,255,0.05);transform:skewX(-5deg);}
+.cta-in{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-t h2{font-family:var(--ff-t);letter-spacing:0.04em;font-size:clamp(1.9rem,4.5vw,3.2rem);color:var(--white);line-height:0.95;margin-bottom:9px;}
+.cta-t p{color:rgba(255,255,255,0.68);font-size:0.98rem;}
+
+/* ===================== FOOTER ===================== */
+footer{background:var(--ink);}
+.fm{display:grid;grid-template-columns:2fr 1fr 1fr 1.6fr;gap:56px;padding:76px 0 52px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.fb .flm{width:40px;height:40px;background:var(--red);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-t);font-size:17px;color:var(--white);letter-spacing:1px;margin-bottom:16px;}
+.fb p{font-size:0.83rem;color:rgba(255,255,255,0.34);line-height:1.8;max-width:265px;margin-bottom:24px;}
+.sr{display:flex;gap:9px;}
+.so{width:35px;height:35px;border-radius:3px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.35);font-size:0.83rem;transition:all 0.2s;}
+.so:hover{background:var(--red);color:var(--white);border-color:var(--red);}
+.fc2 h5{font-size:0.67rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.fc2 li{margin-bottom:10px;}
+.fc2 a{font-size:0.83rem;color:rgba(255,255,255,0.36);transition:color 0.2s;}
+.fc2 a:hover{color:var(--white);}
+.ci2 p{display:flex;align-items:flex-start;gap:11px;font-size:0.82rem;color:rgba(255,255,255,0.36);line-height:1.65;margin-bottom:12px;}
+.ci2 i{color:var(--red);margin-top:2px;flex-shrink:0;}
+.nlf input{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:2px;padding:11px 15px;color:var(--white);font-family:var(--ff-b);font-size:0.83rem;margin-bottom:7px;outline:none;transition:border-color 0.2s;}
+.nlf input::placeholder{color:rgba(255,255,255,0.22);}
+.nlf input:focus{border-color:var(--red);}
+.nlf button{width:100%;background:var(--red);color:var(--white);border:none;border-radius:2px;padding:12px;font-family:var(--ff-b);font-size:0.8rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
+.nlf button:hover{background:var(--red-deep);}
+.fb2{padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.fb2 p{font-size:0.75rem;color:rgba(255,255,255,0.18);}
+.lg-links{display:flex;gap:20px;}
+.lg-links a{font-size:0.75rem;color:rgba(255,255,255,0.18);transition:color 0.2s;}
+.lg-links a:hover{color:var(--red);}
+
+.bt{position:fixed;bottom:28px;right:28px;z-index:500;width:42px;height:42px;border-radius:2px;background:var(--red);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.88rem;box-shadow:var(--sh-r);cursor:pointer;opacity:0;transform:translateY(18px);transition:all 0.3s var(--ease);}
+.bt.v{opacity:1;transform:translateY(0);}.bt:hover{background:var(--red-deep);transform:translateY(-3px);}
+
+/* REVEAL */
+.rv,.rl,.rr{opacity:0;transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);}
+.rv{transform:translateY(30px);}.rl{transform:translateX(-30px);}.rr{transform:translateX(30px);}
+.rv.iv,.rl.iv,.rr.iv{opacity:1;transform:none;}
+[data-d="1"]{transition-delay:0.1s;}[data-d="2"]{transition-delay:0.2s;}[data-d="3"]{transition-delay:0.3s;}
+[data-d="4"]{transition-delay:0.4s;}[data-d="5"]{transition-delay:0.5s;}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:1100px){
+  .fm{grid-template-columns:1fr 1fr;gap:36px;}
+  .contact-grid{grid-template-columns:1fr;}
+  .contact-form-panel{border-left:none;border-top:2px solid var(--border);}
+  .wc-grid{grid-template-columns:1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+  .faq-aside{position:static;}
+}
+@media(max-width:900px){
+  .nav-ul,.nav-cta-d{display:none;}.hbg{display:flex;}
+  .qc-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .contact-info-panel{padding:52px 32px;}
+  .contact-form-panel{padding:52px 32px;}
+}
+@media(max-width:600px){
+  .container{padding:0 16px;}.sp{padding:68px 0;}.sp-sm{padding:52px 0;}
+  .ph-title{font-size:3rem;}
+  .fm{grid-template-columns:1fr;gap:28px;}
+  .urgency-row{flex-direction:column;}
+  .wc-badge{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="container">
+    <nav class="ni">
+      <a href="botlhale-solutions.html" class="logo">
+        <div class="lm"><img src="images/logo.jpeg" alt=""></div>
+        <div class="lt">
+          <div class="br">Botlhale Solutions</div>
+          <div class="sb">Nigeria Ltd · Brand Integrity</div>
+        </div>
+      </a>
+      <ul class="nav-ul">
+        <li><a href="botlhale-solutions.html">Home</a></li>
+        <li><a href="about-botlhale-solutions.html">About BSA</a></li>
+        <li><a href="service.botlhale-solutions.html">Services</a></li>
+        <li><a href="botlhale-solutions.html#process">Our Process</a></li>
+        <li><a href="botlhale-solutions.html#why">Why Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-cta-d" style="display:flex;">
+        <a href="#consult-form" class="btn btn-red">Request Consultation <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <a href="botlhale-solutions.html">Home</a>
+  <a href="about-botlhale-solutions.html">About BSA</a>
+  <a href="service.botlhale-solutions.html">Services</a>
+  <a href="botlhale-solutions.html#process">Our Process</a>
+  <a href="botlhale-solutions.html#why">Why Us</a>
+  <a href="contact.html" class="active">Contact</a>
+  <a href="#consult-form" class="btn btn-red" style="margin-top:12px;">Request Consultation</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="ph-bg"></div>
+  <div class="ph-grid"></div>
+  <div class="ph-bar"></div>
+  <div class="ph-slice"></div>
+  <div class="ph-body">
+    <div class="ph-inner">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="botlhale-solutions.html">Home</a>
+          <span class="sep"><i class="fas fa-chevron-right"></i></span>
+          <span class="cur">Contact & Consultation</span>
+        </div>
+        <div class="hero-kicker"><span class="dot"></span>Available 24/7 for urgent brand threats</div>
+        <h1 class="ph-title">Let's <span class="ac">Talk</span><br>Strategy</h1>
+        <p class="ph-sub">Whether you're facing an active counterfeiting crisis or planning long-term brand protection — our intelligence team is ready. Confidential. No obligation.</p>
+        <div class="ph-actions">
+          <a href="#consult-form" class="btn btn-red">Request Consultation <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+2348123456789" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us Directly</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTACT + FORM -->
+<section class="contact-main" id="consult-form">
+  <div class="contact-grid">
+
+    <!-- LEFT: Info Panel -->
+    <div class="contact-info-panel">
+      <div class="cip-top">
+        <div class="tag">Get In Touch</div>
+        <h2>Every <em>Brand Deserves</em><br>Protection</h2>
+        <p>Reach out through any channel. All enquiries are treated with strict confidentiality — we never disclose client identities or case details.</p>
+
+        <div class="response-badge">
+          <div class="rb-dot"></div>
+          <div class="rb-text">Average response time: <strong>Under 4 hours</strong></div>
+        </div>
+
+        <div class="c-items">
+          <div class="c-item">
+            <div class="c-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="c-label">Email Us</div>
+              <div class="c-val"><a href="mailto:m.ogwu@botlhalesolutions.com">m.ogwu@botlhalesolutions.com</a></div>
+              <div class="c-sub">For consultations, proposals & general enquiries</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <div class="c-label">Call Us Directly</div>
+              <div class="c-val"><a href="tel:+2348123456789">+234 812 345 6789</a></div>
+              <div class="c-sub">24/7 for urgent brand protection emergencies</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="c-label">Visit Our Office</div>
+              <div class="c-val">Lagos</div>
+              <div class="c-sub">Nigeria</div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="c-label">Office Hours</div>
+              <div class="c-val">Mon – Fri: 8:00 AM – 6:00 PM</div>
+              <div class="c-sub">Emergency intelligence ops: 24/7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cip-bottom">
+        <div class="c-social-label">Follow BSA Nigeria</div>
+        <div class="c-socials">
+          <a href="#" class="cs"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="cs"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="cs"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="cs"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="cs"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form Panel -->
+    <div class="contact-form-panel">
+      <!-- Form itself -->
+      <div id="formWrapper">
+        <div class="form-head">
+          <div class="tag">Request a Consultation</div>
+          <h2>Tell Us About Your <em>Brand Challenge</em></h2>
+          <p>Fill in the form below and one of our senior intelligence consultants will respond within 4 hours on business days. All information is strictly confidential.</p>
+        </div>
+
+        <!-- Service quick-select -->
+        <div style="margin-bottom:10px;">
+          <div style="font-size:0.73rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--charcoal);margin-bottom:10px;">Service of interest <span style="color:var(--red);">*</span></div>
+          <div class="svc-selector">
+            <button type="button" class="ss-btn sel" data-svc="Brand Protection">Brand Protection</button>
+            <button type="button" class="ss-btn" data-svc="Mystery Shopping">Mystery Shopping</button>
+            <button type="button" class="ss-btn" data-svc="Market Research">Market Research</button>
+            <button type="button" class="ss-btn" data-svc="Due Diligence">Due Diligence</button>
+            <button type="button" class="ss-btn" data-svc="Brand Awareness">Brand Awareness</button>
+            <button type="button" class="ss-btn" data-svc="LE Training">LE Training</button>
+            <button type="button" class="ss-btn" data-svc="Not Sure Yet">Not Sure Yet</button>
+          </div>
+          <input type="hidden" id="selectedService" value="Brand Protection">
+        </div>
+
+        <div style="margin-bottom:18px;">
+          <div style="font-size:0.73rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--charcoal);margin-bottom:10px;">Urgency level</div>
+          <div class="urgency-row">
+            <div class="urg-opt">
+              <input type="radio" name="urgency" id="u1" value="standard" checked>
+              <label for="u1"><i class="fas fa-calendar"></i>Standard</label>
+            </div>
+            <div class="urg-opt">
+              <input type="radio" name="urgency" id="u2" value="priority">
+              <label for="u2"><i class="fas fa-bolt"></i>Priority</label>
+            </div>
+            <div class="urg-opt urgent">
+              <input type="radio" name="urgency" id="u3" value="urgent">
+              <label for="u3"><i class="fas fa-triangle-exclamation"></i>Urgent</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label>First Name <span>*</span></label>
+            <input type="text" id="firstName" placeholder="Chukwuemeka" autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label>Last Name <span>*</span></label>
+            <input type="text" id="lastName" placeholder="Okonkwo" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label>Email Address <span>*</span></label>
+            <input type="email" id="emailField" placeholder="you@company.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label>Phone Number <span>*</span></label>
+            <input type="tel" id="phoneField" placeholder="+234 800 000 0000" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label>Company / Organisation <span>*</span></label>
+            <input type="text" id="companyField" placeholder="Your company name">
+          </div>
+          <div class="field">
+            <label>Job Title</label>
+            <input type="text" id="jobField" placeholder="Brand Manager, CEO...">
+          </div>
+        </div>
+
+        <div class="form-row full">
+          <div class="field">
+            <label>Industry Sector <span>*</span></label>
+            <select id="sectorField">
+              <option value="" disabled selected>Select your sector</option>
+              <option>FMCG / Consumer Goods</option>
+              <option>Pharmaceutical & Healthcare</option>
+              <option>Beverages & Brewing</option>
+              <option>Technology & Electronics</option>
+              <option>Fashion & Apparel</option>
+              <option>Automotive Parts</option>
+              <option>Paint, Chemicals & Coatings</option>
+              <option>Banking & Financial Services</option>
+              <option>Retail & Distribution</option>
+              <option>Government / Regulatory Body</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row full">
+          <div class="field">
+            <label>Describe Your Challenge or Enquiry <span>*</span></label>
+            <textarea id="messageField" placeholder="Tell us about your brand protection challenge, the markets affected, the scale of the problem, or any specific questions you have. All information is strictly confidential."></textarea>
+          </div>
+        </div>
+
+        <div class="form-row full">
+          <div class="field">
+            <label>How Did You Hear About Us?</label>
+            <select id="sourceField">
+              <option value="" disabled selected>Select an option</option>
+              <option>Google / Web Search</option>
+              <option>LinkedIn</option>
+              <option>Referral from client or partner</option>
+              <option>Industry event or conference</option>
+              <option>NAFDAC / Regulatory body</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="consent-row">
+          <input type="checkbox" id="consentBox">
+          <label for="consentBox">I confirm that the information provided is accurate and I consent to BSA Nigeria contacting me regarding this enquiry. I understand all communications are strictly confidential. See our <a href="#">Privacy Policy</a>.</label>
+        </div>
+
+        <div class="form-submit-row">
+          <button class="submit-btn" id="submitBtn" type="button">
+            Send Consultation Request <i class="fas fa-arrow-right s-icon"></i>
+          </button>
+        </div>
+        <div style="margin-top:14px;">
+          <div class="or-call">Prefer to speak directly? <a href="tel:+2348123456789">Call +234 812 345 6789</a> or <a href="mailto:m.ogwu@botlhalesolutions.com">email m.ogwu@botlhalesolutions.com</a></div>
+        </div>
+      </div>
+
+      <!-- Success state (hidden initially) -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon"><i class="fas fa-check"></i></div>
+        <h3>Consultation Request Sent</h3>
+        <p>Thank you for reaching out. A senior BSA Nigeria consultant will review your enquiry and respond to <strong id="successEmail"></strong> within 4 business hours.</p>
+        <div class="ref" id="refNum"></div>
+        <p style="font-size:0.8rem;color:var(--muted);margin-top:8px;">For urgent matters, please call <a href="tel:+2348123456789" style="color:var(--red);font-weight:700;">+234 812 345 6789</a> directly.</p>
+        <button class="btn btn-ob" style="margin-top:10px;" onclick="resetForm()">Submit Another Enquiry</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUICK CONTACT CARDS -->
+<section class="quick-contact">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="tag" style="justify-content:center;">Other Ways to Reach Us</div>
+      <h2 class="h2">Choose Your <em>Preferred Channel</em></h2>
+    </div>
+    <div class="qc-grid">
+      <div class="qcc rv" data-d="1">
+        <div class="qcc-icon"><i class="fas fa-envelope-open-text"></i></div>
+        <h4>Email a Consultant</h4>
+        <p>Send your enquiry directly to our senior intelligence team. All emails are treated with strict confidentiality and responded to within 4 hours.</p>
+        <a href="mailto:m.ogwu@botlhalesolutions.com" class="qcc-action">
+          m.ogwu@botlhalesolutions.com <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="qcc rv" data-d="2">
+        <div class="qcc-icon"><i class="fas fa-phone-volume"></i></div>
+        <h4>Call Us Directly</h4>
+        <p>For urgent brand protection emergencies or to speak immediately with one of our intelligence operatives — call our 24/7 line.</p>
+        <a href="tel:+2348123456789" class="qcc-action">
+          +234 812 345 6789 <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="qcc rv" data-d="3">
+        <div class="qcc-icon"><i class="fas fa-location-dot"></i></div>
+        <h4>Visit Our Office</h4>
+        <p>Our Lagos headquarters is open Monday to Friday, 8AM – 6PM. In-person consultations available by appointment.</p>
+        <a href="https://maps.google.com/?q=Victoria+Island+Lagos" target="_blank" rel="noopener" class="qcc-action">
+          Victoria Island, Lagos <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CONSULT BSA -->
+<section class="why-consult sp">
+  <div class="container">
+    <div class="wc-grid">
+      <div class="rl" style="position:relative;">
+        <div class="wc-img">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600" alt="BSA Consultants">
+        </div>
+        <div class="wc-badge">
+          <div class="bn">4hr</div>
+          <div class="bl">Response<br>Guarantee</div>
+        </div>
+      </div>
+      <div class="rr">
+        <div class="tag">Why Consult BSA?</div>
+        <h2 class="h2">What Happens After <em>You Reach Out</em></h2>
+        <p class="lead">Our consultation process is fast, confidential, and consequence-free. Here is exactly what to expect.</p>
+        <div class="wc-points">
+          <div class="wcp">
+            <div class="wcp-ic"><i class="fas fa-1"></i></div>
+            <div>
+              <h5>Confidential Intake — Within 4 Hours</h5>
+              <p>A senior consultant reviews your submission and contacts you to gather initial details. No obligation, no hard sell.</p>
+            </div>
+          </div>
+          <div class="wcp">
+            <div class="wcp-ic"><i class="fas fa-2"></i></div>
+            <div>
+              <h5>Threat Assessment Call — Within 48 Hours</h5>
+              <p>We conduct a structured threat assessment to map the current risk to your brand — geographic scope, volume, and key actors.</p>
+            </div>
+          </div>
+          <div class="wcp">
+            <div class="wcp-ic"><i class="fas fa-3"></i></div>
+            <div>
+              <h5>Tailored Intelligence Brief Delivered</h5>
+              <p>You receive a concise intelligence brief outlining the recommended approach, resources, KPIs, and estimated timeline.</p>
+            </div>
+          </div>
+          <div class="wcp">
+            <div class="wcp-ic"><i class="fas fa-4"></i></div>
+            <div>
+              <h5>Engagement Begins — On Your Terms</h5>
+              <p>If you choose to proceed, operations begin immediately. If not, the consultation and brief remain yours — no strings attached.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec sp" id="faq">
+  <div class="container">
+    <div>
+      <div class="tag">Common Questions</div>
+      <h2 class="h2">Frequently Asked <em>Questions</em></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q">How quickly can BSA respond to an active counterfeiting crisis?<div class="fq-icon"><i class="fas fa-plus"></i></div></div>
+          <div class="faq-a">For confirmed active crises, our rapid response team can begin covert intelligence gathering within 24–48 hours of engagement confirmation. We maintain standing relationships with NAFDAC and state police commands that enable us to move faster than any competitor in the market.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Is my enquiry and company information kept confidential?<div class="fq-icon"><i class="fas fa-plus"></i></div></div>
+          <div class="faq-a">Absolutely. Client confidentiality is non-negotiable at BSA. Your identity, the nature of your enquiry, and all case details are never disclosed to any third party. Our operatives are bound by strict NDAs and our internal security protocols mirror those of law enforcement agencies.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you only operate in Lagos, or across all of Nigeria?<div class="fq-icon"><i class="fas fa-plus"></i></div></div>
+          <div class="faq-a">We have active operational capacity across 12+ Nigerian states including Lagos, Abuja, Kano, Port Harcourt, Ibadan, Aba, and Onitsha. We also operate across West Africa with partner networks in Ghana, Benin, and Côte d'Ivoire.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What industries do you serve?<div class="fq-icon"><i class="fas fa-plus"></i></div></div>
+          <div class="faq-a">Our clients span FMCG, pharmaceuticals, beverages, electronics, automotive parts, fashion, personal care, and financial services. If your brand is sold through Nigerian trade channels, we have the expertise and network to protect it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What does a typical engagement cost?<div class="fq-icon"><i class="fas fa-plus"></i></div></div>
+          <div class="faq-a">Every engagement is scoped individually based on the complexity of the threat, geographic spread, and services required. We provide a transparent, itemised proposal before any work begins — no hidden fees. Initial consultations are free and confidential.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can BSA help with online counterfeiting and social media fraud?<div class="fq-icon"><i class="fas fa-plus"></i></div></div>
+          <div class="faq-a">Yes. Our intelligence operations now cover digital channels including social media platforms, e-commerce marketplaces (Jumia, Konga, Facebook Marketplace), and WhatsApp distribution networks — which are increasingly becoming primary routes for counterfeit goods in Nigeria.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you work with law enforcement directly?<div class="fq-icon"><i class="fas fa-plus"></i></div></div>
+          <div class="faq-a">Yes. BSA has formal Memoranda of Understanding (MoUs) with NAFDAC, the Federal Competition and Consumer Protection Commission (FCCPC), and multiple state police commands. This means enforcement actions we initiate carry full legal weight and can result in arrests, prosecutions, and permanent seizures.</div>
+        </div>
+      </div>
+
+      <!-- FAQ Aside -->
+      <div class="faq-aside rv">
+        <h3>Still Have<br><em>Questions?</em></h3>
+        <p>Our team is happy to answer any specific questions about our services, coverage, or methodology before you commit to anything.</p>
+        <a href="#consult-form" class="btn btn-red" style="width:100%;justify-content:center;">Request Free Consultation <i class="fas fa-arrow-right"></i></a>
+        <div class="divider"><span>or contact us directly</span></div>
+        <div class="direct-contact">
+          <div class="dc">
+            <div class="dc-ic"><i class="fas fa-envelope"></i></div>
+            <div class="dc-text">
+              <div class="dl">Email</div>
+              <div class="dv"><a href="mailto:m.ogwu@botlhalesolutions.com">m.ogwu@botlhalesolutions.com</a></div>
+            </div>
+          </div>
+          <div class="dc">
+            <div class="dc-ic"><i class="fas fa-phone"></i></div>
+            <div class="dc-text">
+              <div class="dl">Phone (24/7)</div>
+              <div class="dv"><a href="tel:+2348123456789">+234 812 345 6789</a></div>
+            </div>
+          </div>
+          <div class="dc">
+            <div class="dc-ic"><i class="fab fa-whatsapp"></i></div>
+            <div class="dc-text">
+              <div class="dl">WhatsApp</div>
+              <div class="dv"><a href="https://wa.me/2348123456789" target="_blank">+234 812 345 6789</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-s">
+  <div class="container cta-in">
+    <div class="cta-t">
+      <h2>DON'T WAIT FOR THE DAMAGE TO SPREAD</h2>
+      <p>Every day of inaction costs your brand revenue, trust, and market share. Act now.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="#consult-form" class="btn btn-wh">Request Consultation <i class="fas fa-arrow-right"></i></a>
+      <a href="tel:+2348123456789" class="btn btn-ow"><i class="fas fa-phone"></i>Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="fm">
+      <div class="fb">
+        <div class="flm">BS</div>
+        <p>Nigeria's foremost brand protection and intelligence consultancy. Safeguarding IP, recovering revenue, and upholding market integrity across West Africa.</p>
+        <div class="sr">
+          <a href="#" class="so"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="so"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="so"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="so"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="fc2">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="service.botlhale-solutions.html">Brand Protection</a></li>
+          <li><a href="service.botlhale-solutions.html">Mystery Shopping</a></li>
+          <li><a href="service.botlhale-solutions.html">Market Research</a></li>
+          <li><a href="service.botlhale-solutions.html">Due Diligence</a></li>
+          <li><a href="service.botlhale-solutions.html">Brand Awareness</a></li>
+          <li><a href="service.botlhale-solutions.html">LE Training</a></li>
+        </ul>
+      </div>
+      <div class="fc2">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about-botlhale-solutions.html">About BSA Nigeria</a></li>
+          <li><a href="botlhale-solutions.html#process">Our Process</a></li>
+          <li><a href="botlhale-solutions.html#why">Why Choose Us</a></li>
+          <li><a href="botlhale-solutions.html#gallery">Field Operations</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News & Insights</a></li>
+        </ul>
+      </div>
+      <div class="fc2 ci2">
+        <h5>Contact Us</h5>
+        <p><i class="fas fa-map-marker-alt"></i>Lagos, Nigeria</p>
+        <p><i class="fas fa-phone-alt"></i><a href="tel:+2348123456789" style="color:rgba(255,255,255,0.36);">+234 812 345 6789</a></p>
+        <p><i class="fas fa-envelope"></i><a href="mailto:m.ogwu@botlhalesolutions.com" style="color:rgba(255,255,255,0.36);">m.ogwu@botlhalesolutions.com</a></p>
+        <div class="nlf" style="margin-top:14px;">
+          <input type="email" id="nle" placeholder="Your email address">
+          <button id="nlb">Get Industry Alerts</button>
+        </div>
+      </div>
+    </div>
+    <div class="fb2">
+      <p>© 2025 Botlhale Solutions Nigeria Ltd. All rights reserved.</p>
+      <div class="lg-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="bt" id="bt"><i class="fas fa-chevron-up"></i></div>
+
+<script>
+/* ---- Header ---- */
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>{
+  hdr.classList.toggle('sc',window.scrollY>60);
+  document.getElementById('bt').classList.toggle('v',window.scrollY>400);
+});
+
+/* ---- Mobile menu ---- */
+const hbg=document.getElementById('hbg'),mm=document.getElementById('mm');
+hbg.addEventListener('click',()=>{hbg.classList.toggle('op');mm.classList.toggle('op');});
+mm.querySelectorAll('a').forEach(el=>el.addEventListener('click',()=>{hbg.classList.remove('op');mm.classList.remove('op');}));
+
+/* ---- Service selector ---- */
+const ssBtns=document.querySelectorAll('.ss-btn');
+ssBtns.forEach(b=>b.addEventListener('click',()=>{
+  ssBtns.forEach(x=>x.classList.remove('sel'));
+  b.classList.add('sel');
+  document.getElementById('selectedService').value=b.dataset.svc;
+}));
+
+/* ---- FAQ accordion ---- */
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.querySelector('.faq-q').addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+
+/* ---- Form submission ---- */
+document.getElementById('submitBtn').addEventListener('click',()=>{
+  const fn=document.getElementById('firstName').value.trim();
+  const ln=document.getElementById('lastName').value.trim();
+  const em=document.getElementById('emailField').value.trim();
+  const ph=document.getElementById('phoneField').value.trim();
+  const co=document.getElementById('companyField').value.trim();
+  const sc=document.getElementById('sectorField').value;
+  const ms=document.getElementById('messageField').value.trim();
+  const cb=document.getElementById('consentBox').checked;
+  const svc=document.getElementById('selectedService').value;
+  const urg=document.querySelector('input[name="urgency"]:checked')?.value||'standard';
+
+  /* Validation */
+  if(!fn||!ln){alert('Please enter your full name.');return;}
+  if(!em||!em.includes('@')){alert('Please enter a valid email address.');return;}
+  if(!ph){alert('Please enter your phone number.');return;}
+  if(!co){alert('Please enter your company name.');return;}
+  if(!sc){alert('Please select your industry sector.');return;}
+  if(!ms){alert('Please describe your enquiry or brand challenge.');return;}
+  if(!cb){alert('Please confirm your consent to be contacted.');return;}
+
+  /* Loading state */
+  const btn=document.getElementById('submitBtn');
+  btn.classList.add('loading');
+  btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+  /* Build mailto */
+  const subject=encodeURIComponent(`[${urg.toUpperCase()}] BSA Consultation Request — ${svc} — ${co}`);
+  const body=encodeURIComponent(
+`BSA NIGERIA — CONSULTATION REQUEST
+====================================
+Name:       ${fn} ${ln}
+Email:      ${em}
+Phone:      ${ph}
+Company:    ${co}
+Job Title:  ${document.getElementById('jobField').value.trim()||'Not provided'}
+Sector:     ${sc}
+Service:    ${svc}
+Urgency:    ${urg.charAt(0).toUpperCase()+urg.slice(1)}
+Source:     ${document.getElementById('sourceField').value||'Not specified'}
+
+ENQUIRY / CHALLENGE:
+${ms}
+
+====================================
+Submitted via BSA Nigeria website contact form.`
+  );
+
+  /* Simulate brief delay then open mail client */
+  setTimeout(()=>{
+    window.location.href=`mailto:m.ogwu@botlhalesolutions.com?subject=${subject}&body=${body}`;
+
+    /* Show success state */
+    const ref='BSA-'+Date.now().toString(36).toUpperCase().slice(-6);
+    document.getElementById('successEmail').textContent=em;
+    document.getElementById('refNum').textContent='Reference: '+ref;
+    document.getElementById('formWrapper').style.display='none';
+    const succ=document.getElementById('formSuccess');
+    succ.classList.add('show');
+
+    btn.classList.remove('loading');
+    btn.innerHTML='Send Consultation Request <i class="fas fa-arrow-right s-icon"></i>';
+  },1200);
+});
+
+/* ---- Reset form ---- */
+function resetForm(){
+  document.getElementById('formWrapper').style.display='block';
+  document.getElementById('formSuccess').classList.remove('show');
+  document.getElementById('firstName').value='';
+  document.getElementById('lastName').value='';
+  document.getElementById('emailField').value='';
+  document.getElementById('phoneField').value='';
+  document.getElementById('companyField').value='';
+  document.getElementById('jobField').value='';
+  document.getElementById('sectorField').value='';
+  document.getElementById('messageField').value='';
+  document.getElementById('consentBox').checked=false;
+  ssBtns.forEach((b,i)=>{b.classList.toggle('sel',i===0);});
+  document.getElementById('selectedService').value='Brand Protection';
+}
+
+/* ---- Scroll reveal ---- */
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('iv');ro.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.rv,.rl,.rr').forEach(el=>ro.observe(el));
+
+/* ---- Smooth scroll ---- */
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+}));
+
+/* ---- Back to top ---- */
+document.getElementById('bt').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ---- Newsletter ---- */
+document.getElementById('nlb').addEventListener('click',()=>{
+  const e=document.getElementById('nle').value.trim(),b=document.getElementById('nlb');
+  if(e&&e.includes('@')){
+    b.textContent='✓ Subscribed!';b.style.background='#1a6e38';
+    setTimeout(()=>{b.textContent='Get Industry Alerts';b.style.background='';document.getElementById('nle').value='';},3000);
+  }else{
+    b.textContent='Enter valid email';b.style.background='#7a1a1a';
+    setTimeout(()=>{b.textContent='Get Industry Alerts';b.style.background='';},2500);
+  }
+});
+</script>
+</body>
+</html>

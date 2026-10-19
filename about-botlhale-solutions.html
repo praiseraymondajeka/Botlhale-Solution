@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About BSA | Botlhale Solutions Nigeria – Brand Protection Experts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+/* ===== RESET ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+/* ===== DESIGN TOKENS (identical to homepage) ===== */
+:root{
+  --red:#df0a0a;--red-deep:#b30808;--red-pale:#fdf1f1;--red-tint:rgba(223,10,10,0.07);
+  --black:#0e0e0e;--ink:#1a1a1a;--charcoal:#2d2d2d;--mid:#666;--muted:#999;
+  --border:#e6e6e6;--white:#ffffff;--off:#f7f7f7;--light:#f0f0f0;
+  --ff-d:'Cormorant Garamond',serif;--ff-t:'Bebas Neue',sans-serif;--ff-b:'DM Sans',sans-serif;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+  --sh-s:0 6px 24px rgba(0,0,0,0.07);--sh-m:0 18px 52px rgba(0,0,0,0.11);
+  --sh-r:0 10px 36px rgba(223,10,10,0.25);
+}
+
+body{font-family:var(--ff-b);color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--light);}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:3px;}
+
+/* ===== UTILITIES ===== */
+.container{max-width:1240px;margin:0 auto;padding:0 32px;}
+.sp{padding:110px 0;}
+.sp-sm{padding:70px 0;}
+
+.tag{display:inline-flex;align-items:center;gap:9px;font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:16px;}
+.tag::before{content:'';width:22px;height:2px;background:var(--red);flex-shrink:0;}
+
+.h2{font-family:var(--ff-d);font-size:clamp(2.1rem,4vw,3.3rem);font-weight:700;line-height:1.1;color:var(--ink);margin-bottom:18px;}
+.h2 em{font-style:italic;color:var(--red);}
+.lead{font-size:0.98rem;color:var(--mid);line-height:1.85;max-width:570px;}
+
+/* ===== BUTTONS ===== */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--ff-b);font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:13px 30px;border-radius:2px;border:none;cursor:pointer;transition:all 0.3s var(--ease);}
+.btn i{transition:transform 0.25s;}.btn:hover i{transform:translateX(4px);}
+.btn-red{background:var(--red);color:var(--white);box-shadow:var(--sh-r);}
+.btn-red:hover{background:var(--red-deep);transform:translateY(-2px);box-shadow:0 16px 44px rgba(223,10,10,0.35);}
+.btn-blk{background:var(--ink);color:var(--white);}
+.btn-blk:hover{background:var(--charcoal);transform:translateY(-2px);}
+.btn-ob{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+.btn-ob:hover{background:var(--ink);color:var(--white);}
+.btn-ow{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.4);}
+.btn-ow:hover{background:rgba(255,255,255,0.1);border-color:var(--white);}
+.btn-wh{background:var(--white);color:var(--red);box-shadow:0 8px 28px rgba(0,0,0,0.13);}
+.btn-wh:hover{background:var(--off);transform:translateY(-2px);}
+
+/* ===== HEADER (identical to homepage) ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:999;transition:all 0.4s var(--ease);}
+header.sc{background:rgba(255,255,255,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--border),var(--sh-s);}
+.ni{display:flex;align-items:center;justify-content:space-between;padding:20px 0;transition:padding 0.3s;}
+header.sc .ni{padding:13px 0;}
+.logo{display:flex;align-items:center;gap:12px;}
+.lm{width:40px;height:40px;background:var(--red);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-t);font-size:17px;color:var(--white);letter-spacing:1px;flex-shrink:0;transition:background 0.2s;}
+.lm:hover{background:var(--red-deep);}
+.lt .br{font-family:var(--ff-d);font-size:1.15rem;font-weight:700;color:var(--white);line-height:1;transition:color 0.3s;}
+header.sc .lt .br{color:var(--ink);}
+.lt .sb{font-size:0.58rem;color:rgba(255,255,255,0.5);letter-spacing:0.14em;text-transform:uppercase;margin-top:3px;transition:color 0.3s;}
+header.sc .lt .sb{color:var(--muted);}
+.nl-nav{display:flex;align-items:center;gap:2rem;}
+.nl-nav a{font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:rgba(255,255,255,0.72);transition:color 0.2s;position:relative;padding-bottom:3px;}
+.nl-nav a::after{content:'';position:absolute;bottom:-1px;left:0;right:100%;height:2px;background:var(--red);transition:right 0.3s var(--ease);}
+.nl-nav a:hover,.nl-nav a.active{color:var(--white);}
+.nl-nav a:hover::after,.nl-nav a.active::after{right:0;}
+header.sc .nl-nav a{color:var(--charcoal);}
+header.sc .nl-nav a:hover,.hdr-sc .nl-nav a.active{color:var(--ink);}
+.nav-cta-d{display:flex;}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:3px;}
+.hbg span{display:block;width:24px;height:2px;background:var(--white);transition:all 0.3s;}
+header.sc .hbg span{background:var(--ink);}
+.hbg.op span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hbg.op span:nth-child(2){opacity:0;}
+.hbg.op span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mm{display:none;position:fixed;inset:0;background:var(--ink);z-index:998;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;}
+.mm.op{display:flex;}
+.mm a{font-family:var(--ff-d);font-size:2rem;font-weight:600;color:var(--white);transition:color 0.2s;}
+.mm a:hover,.mm a.active{color:var(--red);}
+
+/* ===== PAGE HERO ===== */
+.page-hero{
+  position:relative;
+  background:var(--ink);
+  min-height:480px;
+  display:flex;align-items:flex-end;
+  overflow:hidden;
+  padding-top:80px; /* header offset */
+}
+.ph-bg{
+  position:absolute;inset:0;
+  background-image:url('images/2104.i203.022.S.m004.c13.realistic\ umbrella.jpg');
+  background-size:cover;background-position:center;
+  opacity:0.22;
+  animation:phz 16s ease-in-out infinite alternate;
+}
+@keyframes phz{from{transform:scale(1);}to{transform:scale(1.06);}}
+.ph-bar{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,transparent,var(--red),transparent);}
+.ph-slice{position:absolute;right:0;top:0;bottom:0;width:35%;background:var(--red);clip-path:polygon(22% 0,100% 0,100% 100%,0 100%);opacity:0.055;}
+.ph-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.022) 1px,transparent 1px);background-size:70px 70px;}
+
+.ph-content{
+  position:relative;z-index:2;
+  padding:80px 0 64px;
+  width:100%;
+}
+.breadcrumb{
+  display:flex;align-items:center;gap:8px;
+  font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.35);margin-bottom:24px;
+}
+.breadcrumb a{color:rgba(255,255,255,0.35);transition:color 0.2s;}
+.breadcrumb a:hover{color:var(--red);}
+.breadcrumb .sep{font-size:0.6rem;color:rgba(255,255,255,0.2);}
+.breadcrumb .curr{color:var(--red);}
+
+.ph-title{
+  font-family:var(--ff-t);
+  font-size:clamp(3.5rem,8vw,6.5rem);
+  line-height:0.92;letter-spacing:0.03em;
+  color:var(--white);margin-bottom:20px;
+}
+.ph-title span{color:var(--red);}
+
+.ph-sub{
+  font-size:1.05rem;color:rgba(255,255,255,0.55);
+  max-width:520px;line-height:1.8;
+}
+
+/* Red bottom border line */
+.ph-border{height:3px;background:linear-gradient(to right,var(--red) 30%,transparent);}
+
+/* ===== INTRO SECTION ===== */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+
+.intro-visual{position:relative;}
+.intro-img{position:relative;overflow:hidden;aspect-ratio:4/5;max-height:580px;border-radius:2px;}
+.intro-img img{width:100%;height:80%;object-fit:cover;transition:transform 0.6s var(--ease);}
+.intro-img:hover img{transform:scale(1.04);}
+
+/* corner triangles (same as homepage about) */
+.ca{position:absolute;top:0;left:0;width:72px;height:72px;background:var(--red);clip-path:polygon(0 0,100% 0,0 100%);z-index:2;}
+.ca2{position:absolute;bottom:0;right:0;width:52px;height:52px;background:var(--ink);clip-path:polygon(100% 0,100% 100%,0 100%);z-index:2;}
+
+.intro-badge{
+  position:absolute;bottom:-22px;right:-22px;
+  background:var(--red);width:132px;height:132px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:var(--sh-r);z-index:3;
+}
+.intro-badge .big{font-family:var(--ff-t);font-size:2.4rem;color:var(--white);line-height:1;}
+.intro-badge .sm{font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.7);text-align:center;margin-top:3px;}
+
+.intro-copy p{font-size:0.97rem;color:var(--mid);line-height:1.85;margin-bottom:18px;}
+.intro-copy p:last-of-type{margin-bottom:0;}
+
+/* Feature badges */
+.feat-badges{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px;
+}
+.fb-item{
+  display:flex;align-items:center;gap:11px;
+  padding:13px 16px;background:var(--off);border:1px solid var(--border);
+  border-radius:2px;transition:all 0.25s;
+}
+.fb-item:hover{border-color:var(--red);background:var(--red-pale);transform:translateY(-2px);}
+.fb-icon{
+  width:32px;height:32px;border-radius:5px;
+  background:var(--red-tint);color:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.85rem;flex-shrink:0;transition:all 0.2s;
+}
+.fb-item:hover .fb-icon{background:var(--red);color:var(--white);}
+.fb-item span{font-size:0.8rem;font-weight:600;color:var(--ink);}
+
+/* ===== MISSION / VISION / VALUES STRIP ===== */
+.mvv-strip{background:var(--ink);}
+.mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid rgba(255,255,255,0.06);}
+.mvv-card{
+  padding:52px 40px;
+  border-right:1px solid rgba(255,255,255,0.06);
+  position:relative;overflow:hidden;
+  transition:background 0.35s;
+}
+.mvv-card:hover{background:rgba(255,255,255,0.03);}
+.mvv-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--red);transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s var(--ease);
+}
+.mvv-card:hover::before{transform:scaleX(1);}
+.mvv-num{
+  font-family:var(--ff-t);font-size:4rem;
+  color:rgba(255,255,255,0.03);position:absolute;
+  top:16px;right:20px;line-height:1;pointer-events:none;
+  transition:color 0.3s;
+}
+.mvv-card:hover .mvv-num{color:rgba(223,10,10,0.06);}
+.mvv-icon{
+  width:48px;height:48px;border-radius:4px;
+  background:var(--red-tint);border:1px solid rgba(223,10,10,0.15);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;color:var(--red);margin-bottom:22px;
+  transition:all 0.3s;
+}
+.mvv-card:hover .mvv-icon{background:var(--red);color:var(--white);border-color:var(--red);}
+.mvv-card h3{font-family:var(--ff-d);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:14px;}
+.mvv-card p{font-size:0.87rem;color:rgba(255,255,255,0.42);line-height:1.78;}
+
+/* ===== CORE VALUES ===== */
+.cv-section{background:var(--off);}
+.cv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:60px;}
+.cv-card{
+  background:var(--white);padding:40px 30px;
+  border-bottom:3px solid transparent;
+  transition:all 0.35s;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cv-card:hover{transform:translateY(-6px);border-bottom-color:var(--red);box-shadow:var(--sh-m);}
+.cv-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--red);transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s var(--ease);
+}
+.cv-card:hover::after{transform:scaleX(1);}
+.cv-icon{
+  width:60px;height:60px;border-radius:12px;
+  background:var(--red-tint);color:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin:0 auto 20px;
+  transition:all 0.3s;
+}
+.cv-card:hover .cv-icon{background:var(--red);color:var(--white);}
+.cv-card h3{font-family:var(--ff-d);font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.cv-card p{font-size:0.84rem;color:var(--mid);line-height:1.72;}
+
+/* ===== TEAM / LEADERSHIP ===== */
+.team-section{background:var(--white);}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;}
+.team-card{
+  position:relative;overflow:hidden;border-radius:2px;
+  transition:transform 0.35s,box-shadow 0.35s;
+}
+.team-card:hover{transform:translateY(-6px);box-shadow:var(--sh-m);}
+.team-img{
+  aspect-ratio:3/4;overflow:hidden;position:relative;
+}
+.team-img img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(20%);transition:transform 0.55s var(--ease),filter 0.35s;}
+.team-card:hover .team-img img{transform:scale(1.06);filter:grayscale(0%);}
+/* Red overlay on hover */
+.team-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(223,10,10,0.55),transparent 50%);
+  opacity:0;transition:opacity 0.35s;
+}
+.team-card:hover .team-img::after{opacity:1;}
+.team-info{
+  padding:22px 24px;background:var(--white);
+  border:1px solid var(--border);border-top:none;
+  border-bottom:3px solid transparent;
+  transition:border-color 0.3s;
+}
+.team-card:hover .team-info{border-bottom-color:var(--red);}
+.team-info h4{font-family:var(--ff-d);font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.team-info .role{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
+.team-info p{font-size:0.82rem;color:var(--mid);line-height:1.65;}
+
+/* ===== STATS BANNER ===== */
+.stats-banner{background:var(--red);padding:70px 0;position:relative;overflow:hidden;}
+.stats-banner::before{
+  content:'BSA';font-family:var(--ff-t);font-size:16rem;color:rgba(0,0,0,0.07);
+  position:absolute;right:-40px;top:50%;transform:translateY(-50%);
+  line-height:1;pointer-events:none;
+}
+.stats-banner::after{
+  content:'';position:absolute;left:-6%;right:75%;top:0;bottom:0;
+  background:rgba(255,255,255,0.05);transform:skewX(-5deg);
+}
+.sb-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  divide-x:1px solid rgba(255,255,255,0.15);
+}
+.sb-item{
+  text-align:center;padding:0 20px;
+  border-right:1px solid rgba(255,255,255,0.15);
+}
+.sb-item:last-child{border-right:none;}
+.sb-num{font-family:var(--ff-t);font-size:3.2rem;color:var(--white);line-height:1;margin-bottom:8px;}
+.sb-lbl{font-size:0.74rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.68);}
+
+/* ===== CALL CARD ===== */
+.call-card{
+  background:var(--ink);border-radius:2px;
+  padding:48px 52px;margin:0;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:32px;
+  position:relative;overflow:hidden;
+  border-left:5px solid var(--red);
+}
+.call-card::before{
+  content:'';position:absolute;right:0;top:0;bottom:0;width:200px;
+  background:linear-gradient(to left,rgba(223,10,10,0.05),transparent);
+}
+.cc-left h3{font-family:var(--ff-d);font-size:1.9rem;font-weight:700;color:var(--white);margin-bottom:8px;}
+.cc-left p{font-size:0.9rem;color:rgba(255,255,255,0.48);line-height:1.7;}
+.cc-left .cc-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(223,10,10,0.12);border:1px solid rgba(223,10,10,0.2);
+  border-radius:2px;padding:5px 14px;
+  font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  color:rgba(255,100,100,0.85);margin-bottom:16px;
+}
+.cc-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:bl 1.8s ease-in-out infinite;}
+@keyframes bl{0%,100%{opacity:1;}50%{opacity:0.2;}}
+.call-phone{
+  display:inline-flex;align-items:center;gap:14px;
+  background:var(--red);color:var(--white);
+  padding:18px 34px;border-radius:2px;
+  font-family:var(--ff-b);font-size:1.05rem;font-weight:700;
+  box-shadow:var(--sh-r);transition:all 0.3s;
+  white-space:nowrap;
+}
+.call-phone:hover{background:var(--red-deep);transform:translateY(-3px);box-shadow:0 16px 44px rgba(223,10,10,0.4);}
+.call-phone i{font-size:1.1rem;}
+
+/* ===== CTA SECTION ===== */
+.cta-s{background:var(--red);padding:86px 0;position:relative;overflow:hidden;}
+.cta-s::before{content:'BSA';font-family:var(--ff-t);font-size:18rem;color:rgba(0,0,0,0.07);position:absolute;right:-50px;top:50%;transform:translateY(-50%);line-height:1;pointer-events:none;letter-spacing:0.04em;}
+.cta-s::after{content:'';position:absolute;left:-6%;right:74%;top:0;bottom:0;background:rgba(255,255,255,0.05);transform:skewX(-5deg);}
+.cta-in{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-t h2{font-family:var(--ff-t);letter-spacing:0.04em;font-size:clamp(1.9rem,4.5vw,3.2rem);color:var(--white);line-height:0.95;margin-bottom:9px;}
+.cta-t p{color:rgba(255,255,255,0.68);font-size:0.98rem;}
+.cta-bs{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* ===== FOOTER (identical to homepage) ===== */
+footer{background:var(--ink);}
+.fm{display:grid;grid-template-columns:2fr 1fr 1fr 1.6fr;gap:56px;padding:76px 0 52px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.f-brand .lm2{width:40px;height:40px;background:var(--red);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--ff-t);font-size:17px;color:var(--white);letter-spacing:1px;margin-bottom:16px;}
+.f-brand p{font-size:0.83rem;color:rgba(255,255,255,0.34);line-height:1.8;max-width:265px;margin-bottom:24px;}
+.sr{display:flex;gap:9px;}
+.so{width:35px;height:35px;border-radius:3px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.35);font-size:0.83rem;transition:all 0.2s;}
+.so:hover{background:var(--red);color:var(--white);border-color:var(--red);}
+.fc2 h5{font-size:0.67rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px;}
+.fc2 li{margin-bottom:10px;}
+.fc2 a{font-size:0.83rem;color:rgba(255,255,255,0.36);transition:color 0.2s;}
+.fc2 a:hover{color:var(--white);}
+.ci2 p{display:flex;align-items:flex-start;gap:11px;font-size:0.82rem;color:rgba(255,255,255,0.36);line-height:1.65;margin-bottom:12px;}
+.ci2 i{color:var(--red);margin-top:2px;flex-shrink:0;}
+.nlf input{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:2px;padding:11px 15px;color:var(--white);font-family:var(--ff-b);font-size:0.83rem;margin-bottom:7px;outline:none;transition:border-color 0.2s;}
+.nlf input::placeholder{color:rgba(255,255,255,0.22);}
+.nlf input:focus{border-color:var(--red);}
+.nlf button{width:100%;background:var(--red);color:var(--white);border:none;border-radius:2px;padding:12px;font-family:var(--ff-b);font-size:0.8rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;}
+.nlf button:hover{background:var(--red-deep);}
+.fb2{padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.fb2 p{font-size:0.75rem;color:rgba(255,255,255,0.18);}
+.lg-l{display:flex;gap:20px;}
+.lg-l a{font-size:0.75rem;color:rgba(255,255,255,0.18);transition:color 0.2s;}
+.lg-l a:hover{color:var(--red);}
+
+/* ===== BACK TO TOP ===== */
+.bt{position:fixed;bottom:28px;right:28px;z-index:500;width:42px;height:42px;border-radius:2px;background:var(--red);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:0.88rem;box-shadow:var(--sh-r);cursor:pointer;opacity:0;transform:translateY(18px);transition:all 0.3s var(--ease);}
+.bt.v{opacity:1;transform:translateY(0);}
+.bt:hover{background:var(--red-deep);transform:translateY(-3px);}
+
+/* ===== REVEAL ANIMATIONS ===== */
+.rv,.rl,.rr{opacity:0;transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);}
+.rv{transform:translateY(30px);}
+.rl{transform:translateX(-30px);}
+.rr{transform:translateX(30px);}
+.rv.iv,.rl.iv,.rr.iv{opacity:1;transform:none;}
+[data-d="1"]{transition-delay:0.1s;}
+[data-d="2"]{transition-delay:0.2s;}
+[data-d="3"]{transition-delay:0.3s;}
+[data-d="4"]{transition-delay:0.4s;}
+[data-d="5"]{transition-delay:0.5s;}
+[data-d="6"]{transition-delay:0.6s;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1100px){
+  .fm{grid-template-columns:1fr 1fr;gap:36px;}
+  .cv-grid{grid-template-columns:1fr 1fr;}
+  .mvv-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:900px){
+  .nl-nav,.nav-cta-d{display:none;}
+  .hbg{display:flex;}
+  .intro-grid{grid-template-columns:1fr;}
+  .intro-badge{bottom:-14px;right:-14px;width:108px;height:108px;}
+  .sb-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .sb-item{border-right:none;padding:0;}
+  .call-card{padding:36px 28px;flex-direction:column;text-align:center;}
+  .call-card .cc-badge{justify-content:center;}
+  .ph-title{font-size:3.5rem;}
+}
+@media(max-width:600px){
+  .container{padding:0 16px;}
+  .sp{padding:68px 0;}
+  .sp-sm{padding:50px 0;}
+  .cv-grid{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr;}
+  .fm{grid-template-columns:1fr;gap:28px;}
+  .feat-badges{grid-template-columns:1fr;}
+  .sb-grid{grid-template-columns:1fr 1fr;}
+  .ph-title{font-size:2.8rem;}
+  .mvv-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="hdr">
+  <div class="container">
+    <nav class="ni">
+      <a href="botlhale-solutions.html" class="logo">
+        <div class="lm"><img src="images/logo.jpeg" alt=""></div>
+        <div class="lt">
+          <div class="br">Botlhale Solutions</div>
+          <div class="sb">Nigeria Ltd · Brand Integrity</div>
+        </div>
+      </a>
+      <ul class="nl-nav">
+        <li><a href="botlhale-solutions.html">Home</a></li>
+        <li><a href="about-botlhale-solutions.html" class="active">About BSA</a></li>
+        <li><a href="service.botlhale-solutions.html">Services</a></li>
+        <li><a href="botlhale-solutions.html#process">Our Process</a></li>
+        <li><a href="botlhale-solutions.html#why">Why Us</a></li>
+        <li><a href="botlhale-solutions.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta-d">
+        <a href="contact.html#consult-form" class="btn btn-red">Get Consultation <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="hbg" id="hbg"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <a href="botlhale-solutions.html" class="ml">Home</a>
+  <a href="about-botlhale-solutions.html" class="ml active">About BSA</a>
+  <a href="service.botlhale-solutions.html" class="ml">Services</a>
+  <a href="botlhale-solutions.html#process" class="ml">Our Process</a>
+  <a href="botlhale-solutions.html#why" class="ml">Why Us</a>
+  <a href="botlhale-solutions.html#contact" class="ml">Contact</a>
+  <a href="contact.html#consult-form" class="btn btn-red" style="margin-top:12px;">Get Consultation</a>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="ph-bg"></div>
+  <div class="ph-bar"></div>
+  <div class="ph-slice"></div>
+  <div class="ph-grid"></div>
+  <div class="container ph-content">
+    <div class="breadcrumb">
+      <a href="botlhale-solutions.html">Home</a>
+      <span class="sep"><i class="fas fa-chevron-right"></i></span>
+      <span class="curr">About BSA</span>
+    </div>
+    <h1 class="ph-title">About <span>BSA</span><br>Nigeria</h1>
+    <p class="ph-sub">Nigeria's foremost brand intelligence and risk mitigation consultancy — built on integrity, driven by intelligence.</p>
+  </div>
+  <div class="ph-border" style="width:100%;position:absolute;bottom:0;left:0;"></div>
+</section>
+
+<!-- ===== INTRO / WHO WE ARE ===== -->
+<section class="sp" id="about">
+  <div class="container">
+    <div class="intro-grid">
+
+      <!-- Visual -->
+      <div class="intro-visual rl">
+        <div class="ca"></div>
+        <div class="intro-img">
+          <img src="images/about-01.png" alt="Botlhale Solutions team">
+          <div class="ca2"></div>
+        </div>
+        <div class="intro-badge">
+          <div class="big">12+</div>
+          <div class="sm">Years<br>Trusted</div>
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <div class="intro-copy rr">
+        <div class="tag">Who We Are</div>
+        <h2 class="h2">Botlhale Solutions <em>Africa</em></h2>
+        <p>At Botlhale Solutions (Africa) Ltd, we are passionate about helping businesses protect what matters most — their brand, their people, and their reputation.</p>
+        <p>Through services like brand protection, mystery shopping, market research, law enforcement support and corporate training, we provide practical, insight-driven solutions that strengthen trust and improve customer experiences across Nigeria and West Africa.</p>
+        <p>Our vision is to become Africa's most trusted risk mitigation partner — delivering smart, forward-thinking strategies that help organisations operate more efficiently, stay compliant, and deliver excellence at every level.</p>
+
+        <div class="feat-badges">
+          <div class="fb-item"><div class="fb-icon"><i class="fas fa-check"></i></div><span>Tailored Solutions</span></div>
+          <div class="fb-item"><div class="fb-icon"><i class="fas fa-globe-africa"></i></div><span>West African Reach</span></div>
+          <div class="fb-item"><div class="fb-icon"><i class="fas fa-chart-line"></i></div><span>Proven Track Record</span></div>
+          <div class="fb-item"><div class="fb-icon"><i class="fas fa-microchip"></i></div><span>Intelligence Technology</span></div>
+          <div class="fb-item"><div class="fb-icon"><i class="fas fa-user-shield"></i></div><span>Ex-Law Enforcement</span></div>
+          <div class="fb-item"><div class="fb-icon"><i class="fas fa-handshake"></i></div><span>Agency Partnerships</span></div>
+        </div>
+
+        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="contact.html#consult-form" class="btn btn-red">Work With Us <i class="fas fa-arrow-right"></i></a>
+          <a href="service.botlhale-solutions.html" class="btn btn-ob">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISSION / VISION / APPROACH ===== -->
+<section class="mvv-strip">
+  <div class="container" style="padding-top:0;padding-bottom:0;">
+    <div class="mvv-grid">
+      <div class="mvv-card rv" data-d="1">
+        <div class="mvv-num">01</div>
+        <div class="mvv-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To deliver intelligence-led brand protection and risk mitigation services that empower Nigerian and African businesses to operate confidently — knowing their IP, revenue and reputation are safeguarded by experts who understand the terrain.</p>
+      </div>
+      <div class="mvv-card rv" data-d="2">
+        <div class="mvv-num">02</div>
+        <div class="mvv-icon"><i class="fas fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>To be Africa's most trusted brand intelligence consultancy — a company where every client, regardless of industry or size, can access world-class protection, rigorous due diligence, and decisive enforcement action against counterfeiters.</p>
+      </div>
+      <div class="mvv-card rv" data-d="3">
+        <div class="mvv-num">03</div>
+        <div class="mvv-icon"><i class="fas fa-route"></i></div>
+        <h3>Our Approach</h3>
+        <p>We don't guess — we gather intelligence. Every engagement begins with evidence collection, proceeds through regulatory coordination, and concludes with measurable enforcement outcomes and transparent ROI reporting for our clients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS BANNER ===== -->
+<section class="stats-banner">
+  <div class="container">
+    <div class="sb-grid">
+      <div class="sb-item rv" data-d="1">
+        <div class="sb-num" data-count="12" data-sfx="+">0+</div>
+        <div class="sb-lbl">Years of Experience</div>
+      </div>
+      <div class="sb-item rv" data-d="2">
+        <div class="sb-num" data-count="150" data-sfx="+">0+</div>
+        <div class="sb-lbl">Brands Protected</div>
+      </div>
+      <div class="sb-item rv" data-d="3">
+        <div class="sb-num" data-count="3200" data-sfx="+">0+</div>
+        <div class="sb-lbl">Items Seized</div>
+      </div>
+      <div class="sb-item rv" data-d="4">
+        <div class="sb-num" data-count="98" data-sfx="%">0%</div>
+        <div class="sb-lbl">Client Retention</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CORE VALUES ===== -->
+<section class="cv-section sp">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="tag" style="justify-content:center;">What Drives Us</div>
+      <h2 class="h2" style="text-align:center;">Our <em>Core Values</em></h2>
+      <p class="lead" style="margin:0 auto;text-align:center;">Every decision, every operation and every report is guided by these principles.</p>
+    </div>
+    <div class="cv-grid">
+      <div class="cv-card rv" data-d="1">
+        <div class="cv-icon"><i class="fas fa-handshake"></i></div>
+        <h3>Integrity</h3>
+        <p>We uphold the highest ethical standards in all our engagements. Our word is our bond — to clients, agencies and the communities we serve.</p>
+      </div>
+      <div class="cv-card rv" data-d="2">
+        <div class="cv-icon"><i class="fas fa-trophy"></i></div>
+        <h3>Excellence</h3>
+        <p>We are committed to delivering high-quality, actionable intelligence. Good enough is never enough when your brand is on the line.</p>
+      </div>
+      <div class="cv-card rv" data-d="3">
+        <div class="cv-icon"><i class="fas fa-lock"></i></div>
+        <h3>Confidentiality</h3>
+        <p>We ensure absolute discretion in all investigations and evaluations. Client identities and operational details are protected at every stage.</p>
+      </div>
+      <div class="cv-card rv" data-d="4">
+        <div class="cv-icon"><i class="fas fa-microchip"></i></div>
+        <h3>Innovation</h3>
+        <p>We leverage cutting-edge intelligence techniques and technology to stay ahead of counterfeiters who are constantly evolving their methods.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEADERSHIP ===== -->
+
+
+<!-- ===== CALL CARD ===== -->
+<section class="sp-sm" style="background:var(--off);">
+  <div class="container">
+    <div class="call-card rv">
+      <div class="cc-left">
+        <div class="cc-badge"><span class="dot"></span>Available 24 / 7</div>
+        <h3>Speak Directly With Our<br>Intelligence Experts</h3>
+        <p>Urgent brand threat? Product counterfeiting detected in your market?<br>Our team is on standby — call us now for immediate consultation.</p>
+      </div>
+      <a href="tel:+2347040315768" class="call-phone">
+        <i class="fas fa-headset"></i>
+        +2347040315768
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US STRIP ===== -->
+<section class="sp" style="background:var(--white);" id="why">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div class="rl">
+        <div class="tag">Why BSA</div>
+        <h2 class="h2">What Sets Us <em>Apart</em></h2>
+        <p class="lead" style="margin-bottom:28px;">We are not a standard consultancy. We are an intelligence organisation that happens to operate in the private sector — bringing enforcement-grade capability to brand protection.</p>
+
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border:1px solid var(--border);border-radius:2px;transition:all 0.3s;" class="wp-row">
+            <div style="width:38px;height:38px;border-radius:4px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;"><i class="fas fa-award"></i></div>
+            <div><h5 style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:4px;">Ex-Law Enforcement Leadership</h5><p style="font-size:0.81rem;color:var(--mid);line-height:1.65;">Former NAFDAC, EFCC and police intelligence officers with real enforcement experience on Nigerian streets.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border:1px solid var(--border);border-radius:2px;transition:all 0.3s;" class="wp-row">
+            <div style="width:38px;height:38px;border-radius:4px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;"><i class="fas fa-network-wired"></i></div>
+            <div><h5 style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:4px;">Formal Regulatory MoUs</h5><p style="font-size:0.81rem;color:var(--mid);line-height:1.65;">Formal agreements with NAFDAC, FCCPC and state commands ensure evidence is legally admissible and actions are swift.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border:1px solid var(--border);border-radius:2px;transition:all 0.3s;" class="wp-row">
+            <div style="width:38px;height:38px;border-radius:4px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;"><i class="fas fa-satellite-dish"></i></div>
+            <div><h5 style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:4px;">24/7 Intelligence Monitoring</h5><p style="font-size:0.81rem;color:var(--mid);line-height:1.65;">Physical markets, social media and e-commerce platforms monitored around the clock. Threats neutralised before they scale.</p></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border:1px solid var(--border);border-radius:2px;transition:all 0.3s;" class="wp-row">
+            <div style="width:38px;height:38px;border-radius:4px;background:var(--red-tint);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;"><i class="fas fa-file-contract"></i></div>
+            <div><h5 style="font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:4px;">Full Evidential Reporting</h5><p style="font-size:0.81rem;color:var(--mid);line-height:1.65;">Chain-of-custody docs, photographic evidence and ROI metrics delivered after every operation — full accountability.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rr" style="position:relative;">
+        <div style="position:relative;border-radius:2px;overflow:hidden;aspect-ratio:4/3;">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1600" alt="BSA professionals" style="width:100%;height:100%;object-fit:cover;filter:contrast(1.05);">
+          <div style="position:absolute;left:0;bottom:0;top:0;width:5px;background:var(--red);"></div>
+        </div>
+        <div style="position:absolute;bottom:-20px;right:-20px;background:var(--ink);color:var(--white);padding:20px 24px;border-radius:2px;box-shadow:var(--sh-m);min-width:192px;border-bottom:4px solid var(--red);">
+          <div style="font-family:var(--ff-t);font-size:2.5rem;color:var(--red);line-height:1;">100%</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">Legally Compliant<br>Operations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-s">
+  <div class="container cta-in">
+    <div class="cta-t">
+      <h2>READY TO PROTECT YOUR BRAND?</h2>
+      <p>Schedule a confidential consultation with our intelligence team today.</p>
+    </div>
+    <div class="cta-bs">
+      <a href="botlhale-solutions.html#contact" class="btn btn-wh">Request Consultation <i class="fas fa-arrow-right"></i></a>
+      <a href="tel:+2348123456789" class="btn btn-ow"><i class="fas fa-phone"></i> Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contact">
+  <div class="container">
+    <div class="fm">
+      <div class="f-brand">
+        <div class="lm2">BS</div>
+        <p>Nigeria's foremost brand protection and intelligence consultancy. Safeguarding IP, recovering revenue, and upholding market integrity across West Africa.</p>
+        <div class="sr">
+          <a href="#" class="so"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="so"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="so"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="so"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="fc2">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="index.html#services">Brand Protection</a></li>
+          <li><a href="index.html#services">Mystery Shopping</a></li>
+          <li><a href="index.html#services">Market Research</a></li>
+          <li><a href="index.html#services">Due Diligence</a></li>
+          <li><a href="index.html#services">Brand Awareness</a></li>
+          <li><a href="index.html#services">LE Training</a></li>
+        </ul>
+      </div>
+      <div class="fc2">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about-botlhale-solutions.html">About BSA Nigeria</a></li>
+          <li><a href="botlhale-solutions.html#process">Our Process</a></li>
+          <li><a href="botlhale-solutions.html#why">Why Choose Us</a></li>
+          <li><a href="botlhale-solutions.html#gallery">Field Operations</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News & Insights</a></li>
+        </ul>
+      </div>
+      <div class="fc2 ci2">
+        <h5>Contact Us</h5>
+        <p><i class="fas fa-map-marker-alt"></i>Lagos, Nigeria</p>
+        <p><i class="fas fa-phone-alt"></i><a href="tel:+2347040315768" style="color:rgba(255,255,255,0.36);">++2347040315768</a></p>
+        <p><i class="fas fa-envelope"></i><a href="mailto:m.ogwu@botlhalesolutions.com" style="color:rgba(255,255,255,0.36);">m.ogwu@botlhalesolutions.com</a></p>
+        <div class="nlf" style="margin-top:14px;">
+          <input type="email" id="nle" placeholder="Your email address">
+          <button id="nlb">Get Industry Alerts</button>
+        </div>
+      </div>
+    </div>
+    <div class="fb2">
+      <p>© 2025 Botlhale Solutions Nigeria Ltd. All rights reserved.</p>
+      <div class="lg-l">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="bt" id="bt"><i class="fas fa-chevron-up"></i></div>
+
+<script>
+/* ---- Header scroll ---- */
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => {
+  hdr.classList.toggle('sc', window.scrollY > 60);
+  document.getElementById('bt').classList.toggle('v', window.scrollY > 400);
+});
+
+/* ---- Mobile menu ---- */
+const hbg = document.getElementById('hbg'), mm = document.getElementById('mm');
+hbg.addEventListener('click', () => { hbg.classList.toggle('op'); mm.classList.toggle('op'); });
+mm.querySelectorAll('.ml,.btn').forEach(el => el.addEventListener('click', () => {
+  hbg.classList.remove('op'); mm.classList.remove('op');
+}));
+
+/* ---- Scroll reveal ---- */
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('iv'); ro.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv,.rl,.rr').forEach(el => ro.observe(el));
+
+/* ---- Why-us row hover ---- */
+document.querySelectorAll('.wp-row').forEach(row => {
+  row.addEventListener('mouseenter', () => {
+    row.style.borderColor = 'var(--red)';
+    row.style.transform = 'translateX(5px)';
+    row.style.boxShadow = '0 6px 24px rgba(0,0,0,0.07)';
+    const icon = row.querySelector('div > div');
+    if (icon) { icon.style.background = 'var(--red)'; icon.style.color = 'var(--white)'; }
+  });
+  row.addEventListener('mouseleave', () => {
+    row.style.borderColor = 'var(--border)';
+    row.style.transform = '';
+    row.style.boxShadow = '';
+    const icon = row.querySelector('div > div');
+    if (icon) { icon.style.background = 'var(--red-tint)'; icon.style.color = 'var(--red)'; }
+  });
+});
+
+/* ---- Counters ---- */
+function animCount(el) {
+  const t = +el.dataset.count, s = el.dataset.sfx || '+';
+  let v = 0; const step = t / (1800 / 16);
+  const i = setInterval(() => {
+    v = Math.min(v + step, t);
+    el.textContent = Math.floor(v).toLocaleString() + s;
+    if (v >= t) clearInterval(i);
+  }, 16);
+}
+let counted = false;
+const cObs = new IntersectionObserver(([e]) => {
+  if (e.isIntersecting && !counted) {
+    counted = true;
+    document.querySelectorAll('.sb-num[data-count]').forEach(animCount);
+  }
+}, { threshold: 0.4 });
+const sbSection = document.querySelector('.stats-banner');
+if (sbSection) cObs.observe(sbSection);
+
+/* ---- Back to top ---- */
+document.getElementById('bt').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ---- Smooth scroll ---- */
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+  const t = document.querySelector(a.getAttribute('href'));
+  if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+}));
+
+/* ---- Newsletter ---- */
+const nlb = document.getElementById('nlb');
+if (nlb) {
+  nlb.addEventListener('click', () => {
+    const email = document.getElementById('nle').value.trim();
+    if (email && email.includes('@')) {
+      nlb.textContent = '✓ Subscribed!'; nlb.style.background = '#1a6e38';
+      setTimeout(() => { nlb.textContent = 'Get Industry Alerts'; nlb.style.background = ''; document.getElementById('nle').value = ''; }, 3000);
+    } else {
+      nlb.textContent = 'Enter valid email'; nlb.style.background = '#7a1a1a';
+      setTimeout(() => { nlb.textContent = 'Get Industry Alerts'; nlb.style.background = ''; }, 2500);
+    }
+  });
+}
+</script>
+</body>
+</html>
