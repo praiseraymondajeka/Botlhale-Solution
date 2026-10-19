@@ -73,10 +73,10 @@ if (nlb) {
     const email = document.getElementById('nle').value.trim();
     if (email && email.includes('@')) {
       nlb.textContent = '✓ Subscribed!'; nlb.style.background = '#1a6e38';
-      setTimeout(() => { nlb.textContent = 'Subscribe'; nlb.style.background = ''; document.getElementById('nle').value = ''; }, 3000);
+      setTimeout(() => { nlb.textContent = 'Get Industry Alerts'; nlb.style.background = ''; document.getElementById('nle').value = ''; }, 3000);
     } else {
       nlb.textContent = 'Enter valid email'; nlb.style.background = '#7a1a1a';
-      setTimeout(() => { nlb.textContent = 'Subscribe'; nlb.style.background = ''; }, 2500);
+      setTimeout(() => { nlb.textContent = 'Get Industry Alerts'; nlb.style.background = ''; }, 2500);
     }
   });
 }

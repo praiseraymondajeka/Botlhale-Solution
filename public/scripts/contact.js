@@ -56,9 +56,9 @@ document.getElementById('submitBtn').addEventListener('click',()=>{
   btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...';
 
   /* Build mailto */
-  const subject=encodeURIComponent(`[${urg.toUpperCase()}] MoneyLot Inquiry — ${svc} — ${co}`);
+  const subject=encodeURIComponent(`[${urg.toUpperCase()}] Afro Metrics Consultation Request — ${svc} — ${co}`);
   const body=encodeURIComponent(
-`MONEYLOT — INQUIRY REQUEST
+`AFRO METRICS — CONSULTATION REQUEST
 ====================================
 Name:       ${fn} ${ln}
 Email:      ${em}
@@ -66,23 +66,23 @@ Phone:      ${ph}
 Company:    ${co}
 Job Title:  ${document.getElementById('jobField').value.trim()||'Not provided'}
 Sector:     ${sc}
-Inquiry:    ${svc}
+Service:    ${svc}
 Urgency:    ${urg.charAt(0).toUpperCase()+urg.slice(1)}
 Source:     ${document.getElementById('sourceField').value||'Not specified'}
 
-DETAILS / REQUIREMENTS:
+ENQUIRY / CHALLENGE:
 ${ms}
 
 ====================================
-Submitted via MoneyLot website contact portal.`
+Submitted via Afro Metrics website contact form.`
   );
 
   /* Simulate brief delay then open mail client */
   setTimeout(()=>{
-    window.location.href=`mailto:service@moneylot.com?subject=${subject}&body=${body}`;
+    window.location.href=`mailto:info@afrometrix.org?subject=${subject}&body=${body}`;
 
     /* Show success state */
-    const ref='ML-'+Date.now().toString(36).toUpperCase().slice(-6);
+    const ref='AFM-'+Date.now().toString(36).toUpperCase().slice(-6);
     document.getElementById('successEmail').textContent=em;
     document.getElementById('refNum').textContent='Reference: '+ref;
     document.getElementById('formWrapper').style.display='none';
@@ -90,7 +90,7 @@ Submitted via MoneyLot website contact portal.`
     succ.classList.add('show');
 
     btn.classList.remove('loading');
-    btn.innerHTML='Send Inquiry <i class="fas fa-arrow-right s-icon"></i>';
+    btn.innerHTML='Send Consultation Request <i class="fas fa-arrow-right s-icon"></i>';
   },1200);
 });
 
@@ -133,7 +133,7 @@ document.getElementById('nlb').addEventListener('click',()=>{
     b.textContent='✓ Subscribed!';b.style.background='#1a6e38';
     setTimeout(()=>{b.textContent='Get Industry Alerts';b.style.background='';document.getElementById('nle').value='';},3000);
   }else{
-    b.textContent='Enter valid email';b.style.background='#00234f';
+    b.textContent='Enter valid email';b.style.background='#7a1a1a';
     setTimeout(()=>{b.textContent='Get Industry Alerts';b.style.background='';},2500);
   }
 });

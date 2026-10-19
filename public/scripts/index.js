@@ -52,7 +52,7 @@ document.getElementById('bt').addEventListener('click',()=>window.scrollTo({top:
 /* Newsletter */
 document.getElementById('nlb').addEventListener('click',()=>{
   const e=document.getElementById('nle').value.trim(),b=document.getElementById('nlb');
-  if(e&&e.includes('@')){b.textContent='✓ Subscribed!';b.style.background='#1a6e38';setTimeout(()=>{b.textContent='Subscribe';b.style.background='';document.getElementById('nle').value='';},3000);}
-  else{b.textContent='Enter valid email';b.style.background='#7a1a1a';setTimeout(()=>{b.textContent='Subscribe';b.style.background='';},2500);}
+  if(e&&e.includes('@')){b.textContent='✓ Subscribed!';b.style.background='#1a6e38';setTimeout(()=>{b.textContent='Get Industry Alerts';b.style.background='';document.getElementById('nle').value='';},3000);}
+  else{b.textContent='Enter valid email';b.style.background='#7a1a1a';setTimeout(()=>{b.textContent='Get Industry Alerts';b.style.background='';},2500);}
 });
 })();
